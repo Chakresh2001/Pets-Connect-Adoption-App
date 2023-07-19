@@ -1,0 +1,110 @@
+/* Navbar.css */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: #9a48d0;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.logo {
+  width: 100px;
+}
+
+.brand {
+  margin: 0 10px;
+}
+
+.menu-icon {
+  cursor: pointer;
+  font-size: 24px;
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-links.open {
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #7e5a9b;
+  color: #fff;
+  padding: 10px;
+}
+
+.links-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.links-list li {
+  margin: 0 10px;
+}
+
+.links-list a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.heart-icon {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .logo-container {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  .brand {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 24px;
+  }
+
+  .nav-links {
+    display: none;
+    font-size: 24px;
+  }
+
+  .nav-links.open {
+    display: flex;
+    font-size: 24px;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+}
+
+
+ /* Navbar.css */
+/* ... existing styles ... */
+
