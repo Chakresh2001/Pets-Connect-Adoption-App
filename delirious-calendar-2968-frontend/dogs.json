@@ -1,0 +1,394 @@
+{
+    "dogs":[
+        {
+            "id":1,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/48100346/1/?bust=1591093605&width=1080",
+            "name":"Mocha",
+            "age":"young",
+            "breed":"pug",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":100
+        },
+        {
+            "id":2,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/48017216/1/?bust=1591006865&width=1080",
+            "name":"Kimble",
+            "age":"puppy",
+            "breed":"chihuahua",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":150
+        },
+        {
+            "id":3,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/47502639/1/?bust=1591006887&width=1080",
+            "name":"Sailor Moon",
+            "age":"young",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":90
+        },
+        {
+            "id":4,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64272422/1/?bust=1683800933&width=1080",
+            "name":"Boo",
+            "age":"adult",
+            "breed":"Lhasa Apso",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":115
+        },
+        {
+            "id":5,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64228600/1/?bust=1683713812&width=1080",
+            "name":"Rambo",
+            "age":"puppy",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":110
+        },
+        {
+            "id":6,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64228601/1/?bust=1683713877&width=1080",
+            "name":"Mamba",
+            "age":"puppy",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":70
+        },
+        {
+            "id":7,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64228599/1/?bust=1683713814&width=1080",
+            "name":"Pebbles",
+            "age":"puppy",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":130
+        },
+        {
+            "id":8,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64094875/1/?bust=1683454881&width=1080",
+            "name":"Cookie",
+            "age":"puppy",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":0
+        },
+        {
+            "id":9,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64055348/1/?bust=1683454881&width=1080",
+            "name":"Mac",
+            "age":"adult",
+            "breed":"Shih Tzu",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":250
+        },
+        {
+            "id":10,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63947579/1/?bust=1683303760&width=1080",
+            "name":"Crunch",
+            "age":"puppy",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":150
+        },
+        {
+            "id":11,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63703333/1/?bust=1683800905&width=1080",
+            "name":"Bell",
+            "age":"puppy",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":80
+        },
+        {
+            "id":12,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63561784/1/?bust=1683800933&width=1080",
+            "name":"Bunny",
+            "age":"puppy",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":130
+        },
+        {
+            "id":13,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63291332/1/?bust=1683800951&width=1080",
+            "name":"Frankie",
+            "age":"puppy",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":100
+        },
+        {
+            "id":14,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63291329/1/?bust=1683800934&width=1080",
+            "name":"Boo",
+            "age":"adult",
+            "breed":"terrier",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":105
+        },
+        {
+            "id":15,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63121334/1/?bust=1683800914&width=1080",
+            "name":"Brute",
+            "age":"adult",
+            "breed":"dachshund",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":75
+        },
+        {
+            "id":16,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/62530115/1/?bust=1683800898&width=1080",
+            "name":"Star",
+            "age":"young",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":250
+        },
+        {
+            "id":17,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60879543/1/?bust=1683800931&width=1080",
+            "name":"Bella",
+            "age":"adult",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":280
+        },
+        {
+            "id":18,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59276542/1/?bust=1683800933&width=1080",
+            "name":"Lokey",
+            "age":"adult",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":150
+        },
+        {
+            "id":19,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58686507/1/?bust=1683800945&width=1080",
+            "name":"Dikki",
+            "age":"adult",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":125
+        },
+        {
+            "id":20,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58618691/1/?bust=1683800958&width=1080",
+            "name":"Audi",
+            "age":"adult",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":130
+        },
+        {
+            "id":21,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58043930/1/?bust=1683800902&width=1080",
+            "name":"Skittles",
+            "age":"adult",
+            "breed":"terrier",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":140
+        },
+        {
+            "id":22,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58043930/1/?bust=1683800902&width=1080",
+            "name":"Cora",
+            "age":"adult",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":160
+        },
+        {
+            "id":23,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55064063/1/?bust=1683800907&width=1080",
+            "name":"Pixy",
+            "age":"adult",
+            "breed":"terrier",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":195
+        },
+        {
+            "id":24,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55064077/1/?bust=1683800918&width=1080",
+            "name":"T'chala",
+            "age":"adult",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":200
+        },
+        {
+            "id":25,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55064072/1/?bust=1683800900&width=1080",
+            "name":"Leo",
+            "age":"adult",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":210
+        },
+        {
+            "id":26,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55064053/1/?bust=1683800901&width=1080",
+            "name":"Meeko",
+            "age":"adult",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":205
+        },
+        {
+            "id":27,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55064074/1/?bust=1683800890&width=1080",
+            "name":"Mya",
+            "age":"adult",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":199
+        },
+        {
+            "id":28,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55064058/1/?bust=1683800894&width=1080",
+            "name":"Russet",
+            "age":"adult",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":165
+        },
+        {
+            "id":29,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55064065/1/?bust=1683800933&width=1080",
+            "name":"Eddie",
+            "age":"adult",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":185
+        },
+        {
+            "id":30,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55064076/1/?bust=1683800934&width=1080",
+            "name":"Olive",
+            "age":"adult",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":170
+        },
+        {
+            "id":31,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55063999/1/?bust=1683800930&width=1080",
+            "name":"Scobby",
+            "age":"adult",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":175
+        },
+        {
+            "id":32,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55064020/1/?bust=1683800931&width=1080",
+            "name":"Fluffy",
+            "age":"adult",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":100
+        },
+        {
+            "id":33,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55064017/1/?bust=1683800914&width=1080",
+            "name":"Teddy",
+            "age":"adult",
+            "breed":"terrier",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":450
+        },
+        {
+            "id":34,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55064038/1/?bust=1683800914&width=1080",
+            "name":"Libby",
+            "age":"adult",
+            "breed":"pit bul",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":600
+        },
+        {
+            "id":35,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55064016/1/?bust=1683800914&width=1080",
+            "name":"Vincent",
+            "age":"adult",
+            "breed":"Shih Tzu",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":350
+        },
+        {
+            "id":36,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55063988/1/?bust=1683800914&width=1080",
+            "name":"Captain",
+            "age":"adult",
+            "breed":"rottweiler",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":290
+        },
+        {
+            "id":37,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55063992/1/?bust=1683800921&width=1080",
+            "name":"Rooches",
+            "age":"adult",
+            "breed":"terrier",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":195
+        },
+        {
+            "id":38,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55064028/1/?bust=1683800906&width=1080",
+            "name":"Heuy",
+            "age":"adult",
+            "breed":"dachshund",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":300
+        },
+        {
+            "id":39,
+            "image":"https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55064031/1/?bust=1683800899&width=1080",
+            "name":"Harley",
+            "age":"adult",
+            "breed":"affenpinscher",
+            "distance":"7 miles away",
+            "location":"7 miles away",
+            "price":250
+        }
+    ]
+}
