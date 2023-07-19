@@ -4,16 +4,22 @@ const userRoute = require('./Routes/userRoute');
 require('dotenv').config();
 const cors = require("cors");
 const adminRoute = require('./Routes/adminRoute');
+const dogsRoute = require('./Routes/DogsRoute');
+const catsRoute = require('./Routes/CatsRoute');
 
 const app = express()
 
-app.use(cors())
+app.use(cors())  // DO NOT TOUCH THIS CODE
 
 app.use(express.json())
 
 app.use("/user", userRoute)
 
 app.use("/admin", adminRoute)
+
+app.use("/dogs", dogsRoute)
+
+app.use("/cats", catsRoute)
 
 
 

@@ -2,6 +2,7 @@ const express = require('express');
 const UserModel = require('../Model/UserModel');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const DogsModel = require('../Model/DogModel');
 
 const userRoute = express.Router()
 
@@ -71,6 +72,8 @@ userRoute.post("/login", async(req,res)=>{
     }
 
 })
+
+
 
 
 module.exports = userRoute
