@@ -72,6 +72,10 @@
   cursor: pointer;
   font-size: 24px;
 }
+button:hover{
+   color: #b87ece;
+   text-decoration: underline;
+}
 
 /* Media queries for responsive design */
 @media (max-width: 768px) {
