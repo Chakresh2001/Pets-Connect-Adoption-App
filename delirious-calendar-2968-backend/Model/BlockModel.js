@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const BlockSchema = mongoose.Schema({
 
-    id:{type:String}
+    email:{type:String}
 
 }, {versionKey:false})
 

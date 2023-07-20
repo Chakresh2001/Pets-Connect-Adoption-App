@@ -44,11 +44,16 @@ adminRoute.post("/block/:id", async(req,res)=>{
     try {
 
         const {id} = req.params
-        
-        const blocked = BlockModel({id:id})
+
+        const user = await UserModel.findOne({_id:id})
+
+
+        const blocked = BlockModel({email:user.email})
         await blocked.save()
 
         const users = await UserModel.findByIdAndDelete(id)
+
+        console.log("users")
 
         res.json({message:"User Has Been Blocked"})
         
