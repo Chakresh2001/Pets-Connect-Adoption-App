@@ -6,11 +6,11 @@ import Navbar from "./Components/Navbar";
 import { AboutPetfinder } from "./Pages/AboutPetfinder";
 import { AdoptingPets } from "./Pages/AdoptingPets";
 
-
 function App() {
    return (
       <div className="App">
-          <Navbar/>
+      <Navbar/>
+
          <AllRoutes/>
          <Footer />
       </div>
