@@ -1,16 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './Components/Navbar';
-import Home from './Pages/Home';
+import logo from "./logo.svg";
+import "./App.css";
+import Footer from "./Components/Footer";
+import { AllRoutes } from "./Routes/Allroutes";
+
 
 function App() {
-  return (
-    <div className="App">
-     <Navbar/>
-
-     {/* <Home/> */}
-    </div>
-  );
+   return (
+      <div className="App">
+         <AllRoutes/>
+         <Footer />
+      </div>
+   );
 }
 
 export default App;
