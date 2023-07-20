@@ -52,6 +52,23 @@ catsRoute.get("/get", async (req, res) => {
 });
 
 
+catsRoute.get("/get/:id", async(req,res)=>{
+
+  try {
+
+    const {id} = req.params
+
+    const cat = await CatsModel.findById(id)
+
+    res.json({cats:cat})
+    
+  } catch (error) {
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+
+})
+
+
 // admin side
 catsRoute.post("/add", async(req,res)=>{
     
