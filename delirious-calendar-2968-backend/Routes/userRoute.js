@@ -59,7 +59,7 @@ userRoute.post("/login", async(req,res)=>{
         const user = await UserModel.findOne({email:email})
 
         if(!user){
-            return res.status(402).json({error:"User Does Not Exsist"})
+            return res.status(402).json({error:"User Does Not Exist"})
         }
 
         bcrypt.compare(password, user.password, function(err, result) {
@@ -68,7 +68,7 @@ userRoute.post("/login", async(req,res)=>{
                 return res.status(403).json({error:"Invalid Password"})
             }
 
-            const token = jwt.sign({ userID : user._id, userName : user.name }, "1234")
+            const token = jwt.sign({ userID : user._id, userName : user.name ,userLocation:user.location}, "1234")
 
             res.json({message:"User Successfully Logged In", token:token})
 
