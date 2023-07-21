@@ -7,15 +7,17 @@ import { AboutPetfinder } from "./Pages/AboutPetfinder";
 import { AdoptingPets } from "./Pages/AdoptingPets";
 import { AdminLogin } from "./Admin/AdminLogin";
 import { AdminHomePage } from "./Admin/AdminHomePage";
+import Cats from "./Pages/Cats";
 
 function App() {
    return (
       <div className="App">
-      {/* <Navbar/>
+      <Navbar/>
 
-         <AllRoutes/>
-         <Footer /> */}
-         <AdminHomePage/>
+         {/* <AllRoutes/> */}
+         <Cats/>
+         <Footer />
+         {/* <AdminHomePage/> */}
       </div>
    );
 }
