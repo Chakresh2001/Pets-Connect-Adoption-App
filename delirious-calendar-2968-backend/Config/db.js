@@ -10,7 +10,7 @@ require('dotenv').config();
 
 const connectToServer = async()=>{
 
-    await mongoose.connect(process.env.MONGODB_LINK)
+    await mongoose.connect("mongodb+srv://chakresh1234:chakresh1234@cluster0.cqppmvp.mongodb.net/PetsConnect?retryWrites=true&w=majority")
 
     console.log("server is running")
 

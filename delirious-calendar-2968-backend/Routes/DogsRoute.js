@@ -55,6 +55,23 @@ dogsRoute.get("/get", async (req, res) => {
       res.status(500).json({ error: "Internal Server Error" });
     }
 });
+
+
+dogsRoute.get("/get/:id", async(req,res)=>{
+
+  try {
+
+    const {id} = req.params
+
+    const dog = await DogsModel.findById(id)
+
+    res.json({dog:dog})
+    
+  } catch (error) {
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+
+})
   
 
 // admin side
