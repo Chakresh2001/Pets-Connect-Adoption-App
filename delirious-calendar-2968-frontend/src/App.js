@@ -11,11 +11,10 @@ import { AdminHomePage } from "./Admin/AdminHomePage";
 function App() {
    return (
       <div className="App">
-      {/* <Navbar/>
+      <Navbar/>
 
          <AllRoutes/>
-         <Footer /> */}
-         <AdminHomePage/>
+         <Footer />
       </div>
    );
 }
