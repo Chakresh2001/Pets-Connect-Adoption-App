@@ -12,6 +12,8 @@ import {
    Image,
    Button,
 } from "@chakra-ui/react";
+import five from "../Images/fo.png"
+
 import {
    FaTwitter,
    FaYoutube,
@@ -57,6 +59,9 @@ const Footer = () => {
          bg={useColorModeValue("#6504b5", "gray.900")}
          color={useColorModeValue("#ffffff", "gray.200")}
       >
+       <Box>
+            <img src={five} alt="" />
+         </Box>
          <Container as={Stack} maxW={"7xl"} py={10}>
             <SimpleGrid columns={{ base: 1, sm: 2, md: 5 }} spacing={{ base: 10, sm: 5, md: 1 }}>
                <Stack align={"flex-start"}>
