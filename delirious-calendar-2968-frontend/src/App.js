@@ -5,6 +5,8 @@ import { AllRoutes } from "./Routes/Allroutes";
 import Navbar from "./Components/Navbar";
 import { AboutPetfinder } from "./Pages/AboutPetfinder";
 import { AdoptingPets } from "./Pages/AdoptingPets";
+import { AdminLogin } from "./Admin/AdminLogin";
+import { AdminHomePage } from "./Admin/AdminHomePage";
 
 function App() {
    return (
