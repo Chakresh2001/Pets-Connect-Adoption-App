@@ -1,8 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "../Pages/Home";
+
 import { AboutPetfinder } from "../Pages/AboutPetfinder";
 import { AdoptingPets } from "../Pages/AdoptingPets";
 import ContributionForm from "../Pages/ContributionForm";
+
 
 export const AllRoutes = () => {
    return (
