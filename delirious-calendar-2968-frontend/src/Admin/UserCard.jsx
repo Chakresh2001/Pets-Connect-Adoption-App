@@ -9,7 +9,7 @@ export const UserCard = ({name,email,location,gender,_id,handleBlockUSer}) => {
             <Text> <span style={{fontWeight:"bold"}}>Email :- </span> {email} </Text>
             <Text> <span style={{fontWeight:"bold"}}>Location :- </span> {location} </Text>
             <Text> <span style={{fontWeight:"bold"}}>Gender :- </span> {gender} </Text>
-            <Button mt="9px" bg="red.500" onClick={()=>handleBlockUSer(_id)}>Block</Button>
+            <Button mt="9px" colorScheme="red" onClick={()=>handleBlockUSer(_id)}>Block</Button>
         </Box>
     </div>
   )

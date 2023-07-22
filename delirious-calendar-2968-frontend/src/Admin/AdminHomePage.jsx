@@ -1,8 +1,10 @@
 import { Box, Button, Flex, useToast } from '@chakra-ui/react'
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { UserCard } from './UserCard'
 import { PostCard } from './PostCard'
+import { DogsCard } from "./DogsCard"
+import { CatsCard } from "./CatsCard"
 
 export const AdminHomePage = () => {
     
@@ -25,18 +27,9 @@ export const AdminHomePage = () => {
 
     const [currentPage, setCurrentPage] = useState(1);
 
-
-  // Function to handle "Next" button click
-  const handleNextClick = () => {
-    setCurrentPage((prevPage) => prevPage + 1);
-  };
-
-  // Function to handle "Previous" button click
-  const handlePreviousClick = () => {
-    setCurrentPage((prevPage) => prevPage - 1);
-  };
-
-
+    const [page,setPage]=useState(1)
+    
+    
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
     const [petType, setPetType] = useState('');
@@ -58,58 +51,123 @@ export const AdminHomePage = () => {
       axios.get("https://shy-erin-perch-kit.cyclic.app/admin/forms")
         .then((res)=>{
             setPosts(res.data.posts)
-        })
-        .catch((err)=>console.log(err))
+          })
+          .catch((err)=>console.log(err))
+        }
+        
+        let handleClickUsers = ()=>{
+          
+          setUserState(!userState)
+          setPostsState(false)
+          setDogsState(false)
+          setCatsState(false)
+          setFormState(false)
+          getUserData()
+          
+        }
+        
+        let handleClickPosts = ()=>{
+          setUserState(false)
+          setDogsState(false)
+          setCatsState(false)
+          setFormState(false)
+          setPostsState(!postsState)
+          getPostData()
     }
+    
+  let handleBlockUSer = (id)=>{
 
-    let handleClickUsers = ()=>{
-
-        setUserState(!userState)
-        setPostsState(false)
-        setDogsState(false)
-        setCatsState(false)
-        setFormState(false)
-        getUserData()
-       
+   axios.post(`https://shy-erin-perch-kit.cyclic.app/admin/block/${id}`)
+   .then((res)=>{
+       getUserData()
+       toast({
+           title: 'User Successfully Blocked',
+           status: 'error',
+           duration: 2000,
+           isClosable: true,
+         })
+       })
+       .catch((err)=>console.log(err))
+            
+  }
+          
+    let getDogsData = ()=>{
+     axios.get(`https://shy-erin-perch-kit.cyclic.app/dogs/get?page=${currentPage}&limit=10`)
+     .then((res)=>{
+       setDogs(res.data.dogs)
+     })
+     .catch((err)=>console.log(err))
     }
-
-    let handleClickPosts = ()=>{
-        setUserState(false)
-        setDogsState(false)
-        setCatsState(false)
-        setFormState(false)
-        setPostsState(!postsState)
-        getPostData()
+          
+          
+    var handleDogsData = ()=>{
+     setDogsState(!DogsState)
+     setUserState(false)
+     setPostsState(false)
+     setCatsState(false)
+     setFormState(false)
+     getDogsData()
     }
+          // Function to handle "Next" button click
+    const handleNextClick = () => {
+      setCurrentPage((prevPage) => prevPage + 1);
+      getDogsData()
+    };
+        
+          // Function to handle "Previous" button click
+    const handlePreviousClick = () => {
+      setCurrentPage((prevPage) => prevPage - 1);
+      getDogsData()
+    };
 
-    let handleBlockUSer = (id)=>{
 
-        axios.post(`https://shy-erin-perch-kit.cyclic.app/admin/block/${id}`)
+    let getCatsData = ()=>{
+      axios.get(`https://shy-erin-perch-kit.cyclic.app/cats/get?page=${page}&limit=10`)
         .then((res)=>{
-            getUserData()
-            toast({
-                title: 'User Successfully Blocked',
-                status: 'error',
-                duration: 2000,
-                isClosable: true,
-            })
-        })
-        .catch((err)=>console.log(err))
-
-    }
-
-    let handleDogsData = ()=>{
-        setDogsState(!DogsState)
-        setUserState(false)
-        setPostsState(false)
-        setCatsState(false)
-        setFormState(false)
-        axios.get(`https://shy-erin-perch-kit.cyclic.app/dogs/get?page=${currentPage}&limit=10`)
-        .then((res)=>{
-            setDogs(res.data.dogs)
+            setCats(res.data.cats)
         })
         .catch((err)=>console.log(err))
     }
+
+    const handleCatsNext = () => {
+      setPage((prev) => prev + 1);
+      getCatsData()
+    };
+        
+          // Function to handle "Previous" button click
+    const handleCatsPrevious = () => {
+      setPage((prev) => prev - 1);
+      getCatsData()
+    };
+
+    const DeleteDogsData = (id)=>{
+      axios.delete(`https://shy-erin-perch-kit.cyclic.app/dogs/delete/${id}`)
+      .then((res)=>{
+        toast({
+          title: 'Data Deleted',
+          status: 'error',
+          duration: 2000,
+          isClosable: true,
+        })
+        getDogsData()
+      })
+    }
+    const DeleteCatsData = (id)=>{
+      axios.delete(`https://shy-erin-perch-kit.cyclic.app/Cats/delete/${id}`)
+      .then((res)=>{
+        toast({
+          title: 'Data Deleted',
+          status: 'error',
+          duration: 2000,
+          isClosable: true,
+        })
+        getCatsData()
+      })
+    }
+
+    
+    
+    
 
     let handleCatsData = ()=>{
         setDogsState(false)
@@ -117,11 +175,7 @@ export const AdminHomePage = () => {
         setPostsState(false)
         setFormState(false)
         setCatsState(!CatsState)
-        axios.get("https://shy-erin-perch-kit.cyclic.app/cats/get")
-        .then((res)=>{
-            setCats(res.data.cats)
-        })
-        .catch((err)=>console.log(err))
+        getCatsData()
     }
 
     let handleFormState=()=>{
@@ -158,7 +212,7 @@ export const AdminHomePage = () => {
       })
     }
 
-    
+    console.log(page)
 
   return (
     <div>
@@ -211,34 +265,48 @@ export const AdminHomePage = () => {
     {
         DogsState && <div style={{marginTop:"40px"}}>
                     <h1 style={{fontSize:"24px", fontWeight:"bold"}}>Dogs Data</h1>
-                    <Box  display={"grid"} gridTemplateColumns={"1fr 1fr 1fr"} gap="20px" mt="45px"  >
+                    <Box  display={"grid"} gridTemplateColumns={"1fr 1fr "} gap="20px" mt="45px"  >
 
             {
                 dogs.map((ele)=>(
                     <div>
-                      <PostCard {...ele} handleNextClick={handleNextClick} handlePreviousClick={handlePreviousClick}/>
+                      <DogsCard {...ele} DeleteDogsData={DeleteDogsData}/>
                     </div>
                 ))
             }
                     </Box>
+            <Box display="flex" gap="15px" justifyContent="center" mt="10px">
+              <Button onClick={handlePreviousClick} isDisabled={currentPage==1}>
+                Previous
+              </Button>
+              <Button onClick={handleNextClick} isDisabled={currentPage==5}>
+                Next
+              </Button>
+            </Box>
         </div>
     }
 
     {
-        CatsState && <div>
-            <h1>Cats Data</h1>
+        CatsState && <div style={{marginTop:"40px"}}>
+                    <h1 style={{fontSize:"24px", fontWeight:"bold"}}>Cats Data</h1>
+                    <Box  display={"grid"} gridTemplateColumns={"1fr 1fr "} gap="20px" mt="45px"  >
+
             {
                 Cats.map((ele)=>(
-                    <div key={ele._id} style={{border:"1px solid black", marginTop:"10px"}}>
-                    <p>{ele.cat_name}</p>
-                    <p>{ele.breed}</p>
-                    <p>{ele.age}</p>
-                    <p>{ele.location}</p>
-                    <p>{ele.price}</p>
-                    <Button>Delete</Button>
+                    <div>
+                      <CatsCard {...ele} DeleteCatsData={DeleteCatsData}/>
                     </div>
                 ))
             }
+                    </Box>
+            <Box display="flex" gap="15px" justifyContent="center" mt="10px">
+              <Button onClick={handleCatsPrevious} isDisabled={page==1}>
+                Previous
+              </Button>
+              <Button onClick={handleCatsNext} isDisabled={page==3}>
+                Next
+              </Button>
+            </Box>
         </div>
     }
 
