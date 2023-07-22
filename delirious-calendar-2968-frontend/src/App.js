@@ -16,12 +16,12 @@ import Home from "./Pages/Home";
 function App() {
    return (
       <div className="App">
+
        <Navbar/>
-{/* <Birdss/> */}
-<Home/>
-{/* <AdoptingDogs/> */}
-         {/* <AllRoutes/> */}
+
+            <Home/>
          <Footer /> 
+
       </div>
    );
 }
