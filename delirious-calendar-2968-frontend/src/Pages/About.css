@@ -119,10 +119,138 @@
   /* Medium devices (tablets) */
   @media only screen and (min-width: 600px) and (max-width: 959px) {
     /* Add more adjustments as needed */
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .main-content {
+      flex-direction: column;
+    }
+  
+    .info-box,
+    .image-box {
+      flex: 1 1 90%;
+      margin: 0;
+    }
   }
   
   /* Large devices (desktops) */
   @media only screen and (min-width: 960px) {
     /* Add more adjustments as needed */
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .main-content {
+      flex-direction: column;
+    }
+  
+    .info-box,
+    .image-box {
+      flex: 1 1 90%;
+      margin: 0;
+    }
   }
   
+
+
+
+
+  /* Media  */
+  /* About.css */
+
+/* Default styles */
+
+/* Add your default styles here */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* Adjust styles for screen width up to 768px */
+  .about-container {
+    padding: 20px;
+  }
+
+  /* Adjust the styles for different sections at smaller screen sizes */
+  .about-container h1 {
+    font-size: 30px;
+  }
+
+  .about-container div {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  /* Adjust the styles for the nearby-pets section */
+  .nearby-pets {
+    padding: 20px;
+  }
+
+  .nearby-pets h1 {
+    font-size: 30px;
+  }
+
+  .nearby-pets .nearby-pets-list {
+    justify-content: space-between;
+  }
+
+  .nearby-pets img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Add other responsive styles as needed */
+}
+
+/* Add more media queries for different screen sizes as needed */
+/* About.css */
+
+/* Default styles */
+
+/* Add your default styles here */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* Adjust styles for screen width up to 768px */
+  .about-container {
+    padding: 10px;
+  }
+
+  .about-container h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .about-container div {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .about-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Adjust the styles for the nearby-pets section */
+  .nearby-pets h1 {
+    font-size: 20px;
+    text-align: center;
+    flex-direction: wrap;
+  }
+
+  .nearby-pets .nearby-pets-list {
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nearby-pets .product-simple {
+    width: 100%;
+  }
+
+  /* Add other responsive styles as needed */
+}
+
+/* Add more media queries for different screen sizes as needed */

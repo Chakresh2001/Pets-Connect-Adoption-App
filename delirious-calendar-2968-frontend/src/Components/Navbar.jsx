@@ -25,12 +25,8 @@ const Navbar = () => {
     setIsNavOpen(!isNavOpen);
   }
 
-  
-
-
   return (
     <div style={{ width: "90%", display: "flex", justifyContent: "space-evenly", height: "60px"  }}>
-
       <div style={{ width: "40%", display: "flex", margin: "auto", marginLeft: "40px", color: "#3A1456" }}>
         <a href="http://localhost:3000/"><img width="100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYJpd1Z1-nXD8n-9gbkbXcOd7AHwC6AXbz5WgL_aug-yjrRbMD9TMi0-sw4OMvt1uI4KQ&usqp=CAU" alt="" /></a>
         <h3 style={{marginRight:"10px", marginLeft:"10px"}}>ALL ABOUT PETS</h3>
@@ -38,13 +34,14 @@ const Navbar = () => {
       </div>
 
       <div style={{ width: "60%", display: "flex", justifyContent: "space-evenly", marginLeft: "30%", alignItems: "center" }}>
-        <h3><a href=""><AiFillHeart /></a></h3>
+        <h3><a href=""><AiFillHeart style={{ fontSize: '28px' }} /></a></h3>
+        <span style={{ borderLeft: '1px solid gray', height: '50px', margin: '0 8px' }}></span>
         <h3><a href="">Signup</a> </h3>
         <h3><a href="">Login</a></h3>
       </div>
 
       {isNavOpen && (
-        <div style={{ position: "absolute", top: '2%', left: 0, width: '100%', backgroundColor: '#6504b5', color: '#fff', transition: 'height 0.5s', boder:"1px solid red" }}>
+        <div style={{ position: "absolute", top: '50px', left: 0, width: '100%', backgroundColor: '#6504b5', color: '#fff', transition: 'height 0.5s', boder:"1px solid red" }}>
           
           <ul style={{ listStyleType: 'none', padding: 0, display: "flex", justifyContent: "space-evenly", height: "60px", alignItems: "center" }}>
             <li><Menu >
@@ -133,4 +130,6 @@ const Navbar = () => {
 
 export default Navbar;
 
+
+// Navbar.js
 

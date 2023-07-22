@@ -10,7 +10,7 @@ export const AboutPetfinder = () => {
     const handleToggle = () => setShow(!show)
 
   return (
-   <div style={{background:"#EDE7F6", paddingTop:"50px"}}>
+   <div style={{background:"#EDE7F6", paddingTop:"50px"}} className="about-container">
     <div style={{marginRight:"20px",display:"flex", margin:"auto", marginLeft:"10%"}}>
     <a style={{marginRight:"20px"}} href="http://localhost:3000/">Home <ChevronRightIcon/></a>
            
@@ -73,16 +73,15 @@ Petfinder accepts no responsibility for any liability or for any injury or damag
   </Box>
 </Collapse>
 
-<Button size="lg" onClick={handleToggle} mt="1rem" colorScheme='purple' variant='outline' marginLeft="20px">
+<Button size="lg" onClick={handleToggle} mt="1rem" border={"2px solid #6504b5"} color={"#6504b5"} colorScheme='purpule' variant='outline' marginLeft="20px">
   Learn {show ? "Less" : "More"}
 </Button>
-
        </div>
        <div style={{width:"30%", marginLeft:"20px", padding:"10px", background:"white", borderRadius:"15px"}}>
          <img src="https://www.petfinder.com/static/dog_bestMatch_rightRail-0e10aa465452304e3450c52f24c2bc3d.png" alt="" />
          <h1 style={{color:"#6504b5", fontSize:"40px"}}>Find your best <br /> match</h1>
          <p style={{fontSize:"20px"}}>It only takes 60 seconds.</p>
-       <Button size="lg" borderRadius="20" mt="1rem" colorScheme='purple' w="300px" >GET STARTED</Button>
+       <Button size="lg" borderRadius="20" mt="1rem" bg={'#6504b5'} colorScheme='purpule' w="300px" >GET STARTED</Button>
        </div>
     </div>
 <div>
@@ -117,7 +116,7 @@ Petfinder accepts no responsibility for any liability or for any injury or damag
             <input type="text" style={{width:"80%", height:"30px", border:"1px solid gray"}} placeholder='Location' /><br />
             <br />
             <input type="text" placeholder='Group Name' style={{width:"80%", height:"30px", border:"1px solid gray" }} />
-            <Button size="lg" borderRadius="20" mt="1rem" colorScheme='purple' w="300px" >SEARCH</Button>
+            <Button size="lg" borderRadius="20" mt="1rem" bg={'#6504b5'} colorScheme='purpule' w="300px" >SEARCH</Button>
         </div>
         <br />
          <div style={{width:"100%", marginLeft:"20px", padding:"30px", background:"white", borderRadius:"15px"}}>
@@ -126,9 +125,6 @@ Petfinder accepts no responsibility for any liability or for any injury or damag
     </div>
     </div>
 </div>
-    
-
-
     <div  className="nearby-pets" >
         <h1 style={{ textAlign:"left", marginLeft:"25%", fontSize:"40px", color:"#6504b5" }}>Pets avilable for Adoption Nearby</h1>
         <div>

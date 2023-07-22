@@ -17,12 +17,10 @@ function App() {
    return (
       <div className="App">
 
+      <Navbar/>
 
-       <Navbar/>
-
-            <Home/>
-         <Footer /> 
-
+          <AllRoutes/>
+         <Footer />
 
       </div>
    );
