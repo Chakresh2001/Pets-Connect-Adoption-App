@@ -10,13 +10,17 @@ import { AdminHomePage } from "./Admin/AdminHomePage";
 import AdoptingDogs from "./Pages/AdoptingDogs";
 import FeedingDog from "./Pages/FeedingDog";
 import AdoptingCats from "./Pages/AdoptionCat";
+import Birdss from "./Pages/Birds";
+import Home from "./Pages/Home";
 
 function App() {
    return (
       <div className="App">
        <Navbar/>
-
-         <AllRoutes/>
+{/* <Birdss/> */}
+<Home/>
+{/* <AdoptingDogs/> */}
+         {/* <AllRoutes/> */}
          <Footer /> 
       </div>
    );
