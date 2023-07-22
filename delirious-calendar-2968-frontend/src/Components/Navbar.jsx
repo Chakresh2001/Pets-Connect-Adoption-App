@@ -67,7 +67,9 @@ const Navbar = () => {
   DOGS & PUPPIES
   </MenuButton>
   <MenuList color='#fff' bgColor="#6504b5" >
+  <Link to="/dogadopt">
     <MenuItem bgColor="#6504b5">Dog Adoption</MenuItem>
+    </Link>
     <MenuItem bgColor="#6504b5">Dog Breeds</MenuItem>
     <MenuItem bgColor="#6504b5">Feeding your Dog</MenuItem>
     <MenuItem bgColor="#6504b5">Dog Behavior</MenuItem>
@@ -81,7 +83,9 @@ const Navbar = () => {
   CATS & KITTENS
   </MenuButton>
   <MenuList color='#fff' bgColor="#6504b5" >
-    <MenuItem bgColor="#6504b5">Cat Adoption</MenuItem>
+    <Link to="/catadopt">
+      <MenuItem bgColor="#6504b5">Cat Adoption</MenuItem>
+    </Link>
     <MenuItem bgColor="#6504b5">Cat Breeds</MenuItem>
     <MenuItem bgColor="#6504b5">Feeding your Cat</MenuItem>
     <MenuItem bgColor="#6504b5">Cat Behavior</MenuItem>

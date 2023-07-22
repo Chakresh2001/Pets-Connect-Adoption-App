@@ -1,0 +1,21 @@
+.sidebar{
+    width:90%;
+    margin:10px auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.shortdiv{
+    
+    width:85%;
+    margin:auto;
+}
+.filtertitle{
+    font-size: 17px;
+ 
+    border:1px solid red;
+}
+.postion{
+    position: absolute;
+    left: 7%;
+    top: 100px;
+    font-size: 25px;
+}
