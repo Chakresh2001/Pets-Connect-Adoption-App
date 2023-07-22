@@ -23,6 +23,18 @@ export const AdminHomePage = () => {
 
     const [formState, setFormState] = useState(false)
 
+    const [currentPage, setCurrentPage] = useState(1);
+
+
+  // Function to handle "Next" button click
+  const handleNextClick = () => {
+    setCurrentPage((prevPage) => prevPage + 1);
+  };
+
+  // Function to handle "Previous" button click
+  const handlePreviousClick = () => {
+    setCurrentPage((prevPage) => prevPage - 1);
+  };
 
 
     const [fullName, setFullName] = useState('');
@@ -92,7 +104,7 @@ export const AdminHomePage = () => {
         setPostsState(false)
         setCatsState(false)
         setFormState(false)
-        axios.get("https://shy-erin-perch-kit.cyclic.app/dogs/get")
+        axios.get(`https://shy-erin-perch-kit.cyclic.app/dogs/get?page=${currentPage}&limit=10`)
         .then((res)=>{
             setDogs(res.data.dogs)
         })
@@ -197,20 +209,18 @@ export const AdminHomePage = () => {
     }
 
     {
-        DogsState && <div>
-            <h1>Dogs Data</h1>
+        DogsState && <div style={{marginTop:"40px"}}>
+                    <h1 style={{fontSize:"24px", fontWeight:"bold"}}>Dogs Data</h1>
+                    <Box  display={"grid"} gridTemplateColumns={"1fr 1fr 1fr"} gap="20px" mt="45px"  >
+
             {
                 dogs.map((ele)=>(
-                    <div key={ele._id} style={{border:"1px solid black", marginTop:"10px"}}>
-                    <p>{ele.name}</p>
-                    <p>{ele.breed}</p>
-                    <p>{ele.age}</p>
-                    <p>{ele.location}</p>
-                    <p>{ele.price}</p>
-                    <Button>Delete</Button>
+                    <div>
+                      <PostCard {...ele} handleNextClick={handleNextClick} handlePreviousClick={handlePreviousClick}/>
                     </div>
                 ))
             }
+                    </Box>
         </div>
     }
 
