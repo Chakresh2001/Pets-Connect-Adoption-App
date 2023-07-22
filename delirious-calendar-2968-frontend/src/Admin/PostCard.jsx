@@ -22,8 +22,8 @@ export const PostCard = ({pet_breed,pet_age,pet_image,pet_location,pet_name,pet_
         <Text color={`${status ? "green" : "red"}`}> <span style={{fontWeight:"bold"}}>Status :-</span> {status ? "Active" : "Inactive"}</Text>
       </div>
         <Box display={"flex"} gap="20px" justifyContent={"center"}>
-        <Button mt="9px" bg="green.500" onClick={()=>handleApprove(_id)}>Approve</Button>
-        <Button mt="9px" bg="red.500" onClick={()=>handleReject(_id)}>Reject</Button>
+        <Button mt="9px" colorScheme="green" onClick={()=>handleApprove(_id)}>Approve</Button>
+        <Button mt="9px" colorScheme="red" onClick={()=>handleReject(_id)}>Reject</Button>
         </Box>
         </Box>
 

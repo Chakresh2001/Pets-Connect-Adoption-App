@@ -1,6 +1,7 @@
+import { Button } from "@chakra-ui/react";
 
 
-const DogsCard = ({_id,name,breed,age,location,price,handlePreviousClick,handleNextClick,currentPage}) => {
+export const DogsCard = ({_id,name,breed,age,location,price,DeleteDogsData}) => {
 
   
 
@@ -8,28 +9,19 @@ const DogsCard = ({_id,name,breed,age,location,price,handlePreviousClick,handleN
   
   return (
     <div>
-      <h1>Dogs Data</h1>
       
-        <div key={_id} style={{ border: "1px solid black", marginTop: "10px" }}>
-          <p>{name}</p>
-          <p>{breed}</p>
-          <p>{age}</p>
-          <p>{location}</p>
-          <p>{price}</p>
-          <button>Delete</button>
+        <div key={_id} style={{  marginTop: "10px", padding:"20px", boxShadow:"rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+          <p> <span style={{fontWeight:"bold"}}>Name :- </span> {name}</p>
+          <p> <span style={{fontWeight:"bold"}}>Breed :- </span> {breed}</p>
+          <p> <span style={{fontWeight:"bold"}}>Age :- </span> {age}</p>
+          <p> <span style={{fontWeight:"bold"}}>Location :- </span> {location}</p>
+          <p> <span style={{fontWeight:"bold"}}>Price :- </span> {price}</p>
+          <Button mt="15px" colorScheme="red" onClick={()=>DeleteDogsData(_id)}>Delete</Button>
         </div>
      
 
-      <div>
-        <button onClick={handlePreviousClick} disabled={currentPage === 1}>
-          Previous
-        </button>
-        <button onClick={handleNextClick} disabled={currentPage==4}>
-          Next
-        </button>
-      </div>
+      
     </div>
   );
 };
 
-export default DogsCard;
