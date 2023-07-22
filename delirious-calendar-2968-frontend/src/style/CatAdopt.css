@@ -1,0 +1,38 @@
+
+.catadopt{
+    width:100%;
+    display: flex;
+    margin: auto;
+
+}
+.catsidebar{
+    /* border:2px solid red; */
+    width:25%;
+    /* margin: auto; */
+
+
+}
+.catproduct{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    /* border:2px solid blue; */
+    width:75%;
+}
+.singlecatcard{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.singlecatcard > img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover;
+}
+
+.spinner{
+    width:10%;
+    position: absolute;
+    top: 25%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}

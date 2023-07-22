@@ -60,17 +60,17 @@ const Home = () => {
                   justifyContent={"space-evenly"}
                   gap={"50px"}
                >
-                  <Box boxSize={150}>
-                     <img src={one} alt="1" />
+                  <Box boxSize={150}  p={1} >
+                     <img src={one} alt="1" style={{boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}/>
                   </Box>
-                  <Box boxSize={150}>
-                     <img src={two} alt="2" />
+                  <Box boxSize={150}  p={1} >
+                     <img src={two} alt="2"style={{boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }} />
                   </Box>
-                  <Box boxSize={150}>
-                     <img src={three} alt="3" />
+                  <Box boxSize={160}   p={1} >
+                     <img src={three} alt="3" style={{boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}/>
                   </Box>
-                  <Box boxSize={150}>
-                     <img src={four} alt="4" />
+                  <Box boxSize={160} p={1} >
+                     <img src={four} alt="4" style={{boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}/>
                   </Box>
                </Stack>
             </Box>
