@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { AiFillHeart } from 'react-icons/ai';
 import { CgChevronDown } from 'react-icons/cg';
 import { CgChevronUp } from 'react-icons/cg';
@@ -9,22 +9,29 @@ import {
   MenuList,
   MenuItem,
   Text,
+  Button,
+  Box,
 } from '@chakra-ui/react'
+
 
 import './Navbar.css'
 import { AboutPetfinder } from '../Pages/AboutPetfinder';
 import { AdoptingPets } from '../Pages/AdoptingPets';
 import { Link, NavLink } from 'react-router-dom';
+import { authContext } from '../context/AuthContext';
+import { ChevronDownIcon } from '@chakra-ui/icons';
+import { FaRightFromBracket } from 'react-icons/fa6';
 
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
+  const {AuthLogin, AuthName} = useContext(authContext)
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   }
-
+  console.log(AuthLogin)
   return (
     <div style={{ width: "90%", display: "flex", justifyContent: "space-evenly", height: "60px"  }}>
       <div style={{ width: "40%", display: "flex", margin: "auto", marginLeft: "40px", color: "#3A1456" }}>
@@ -34,10 +41,29 @@ const Navbar = () => {
       </div>
 
       <div style={{ width: "60%", display: "flex", justifyContent: "space-evenly", marginLeft: "30%", alignItems: "center" }}>
-        <h3><a href=""><AiFillHeart style={{ fontSize: '28px' }} /></a></h3>
-        <span style={{ borderLeft: '1px solid gray', height: '50px', margin: '0 8px' }}></span>
-        <h3><a href="/Register">Signup</a> </h3>
-        <h3><a href="/Login">Login</a></h3>
+
+            <h3><a href=""><AiFillHeart style={{ fontSize: '28px' }} /></a></h3>  
+        {
+          AuthLogin ? (
+            <Box w="60%">
+            <Menu>
+              <MenuButton>{AuthName}</MenuButton>
+              <MenuList>
+                <MenuItem>Profile</MenuItem>
+                <Link to="/adoptionPage"><MenuItem>Adoption</MenuItem></Link>
+              </MenuList>
+            </Menu>
+              <Button ml="170px" w="4%"  colorScheme='red' > <FaRightFromBracket/> </Button>
+            </Box>
+          ) : (
+            <div style={{ width: "60%", display: "flex", justifyContent: "space-evenly", marginLeft: "30%", alignItems: "center" }}>
+            <span style={{ borderLeft: '1px solid gray', height: '50px', margin: '0 8px' }}></span>
+            <Link to="/signup"><h3>Signup</h3></Link>
+            <Link to="/login"><h3>Login</h3></Link>
+            </div>
+          )
+        }
+
       </div>
 
       {isNavOpen && (

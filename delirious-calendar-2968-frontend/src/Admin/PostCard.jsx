@@ -19,7 +19,7 @@ export const PostCard = ({pet_breed,pet_age,pet_image,pet_location,pet_name,pet_
         <h3 style={{fontSize:"20px", fontWeight:"bold", marginBottom:"10px"}}>User Information</h3>
         <p> <span style={{fontWeight:"bold"}}>User Name :-</span>  {userName}</p>
         <p> <span style={{fontWeight:"bold"}}>User Location :-</span>  {user_location}</p>
-        <Text color={`${status ? "green" : "red"}`}> <span style={{fontWeight:"bold"}}>Status :-</span> {status ? "Active" : "Inactive"}</Text>
+        <Text color={`${status ? "green" : "red"}`} fontWeight={"bold"} fontSize={"24px"}> <span style={{fontWeight:"bold"}}>Status :-</span> {status ? "Approved" : "Pending"}</Text>
       </div>
         <Box display={"flex"} gap="20px" justifyContent={"center"}>
         <Button mt="9px" colorScheme="green" onClick={()=>handleApprove(_id)}>Approve</Button>

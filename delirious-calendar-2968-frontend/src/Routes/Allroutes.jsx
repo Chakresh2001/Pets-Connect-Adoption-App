@@ -1,16 +1,18 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "../Pages/Home";
-
 import { AboutPetfinder } from "../Pages/AboutPetfinder";
 import { AdoptingPets } from "../Pages/AdoptingPets";
 import ContributionForm from "../Pages/ContributionForm";
 import { CatProduct } from "../Components/Products/Cat_adopt";
 import { DogProduct } from "../Components/Products/Dog_adopt";
-import Login from "../Components/Login";
 import Register from "../Components/Register";
-import { AdminHomePage } from "../Admin/AdminHomePage";
-import { AdminLogin } from "../Admin/AdminLogin";
 import { SinglePage } from "../Components/Products/SinglePage";
+import Login from "../Components/Login"
+import { AdminLogin } from "../Admin/AdminLogin"
+import { AdminHomePage } from "../Admin/AdminHomePage"
+import { AdminPrivateRoute } from "../context/AdminPrivateRoute"
+import { AdoptionPage } from "../Pages/AdoptionPage";
+
 
 
 export const AllRoutes = () => {
@@ -23,9 +25,12 @@ export const AllRoutes = () => {
             <Route path="/ContributionForm" element={<ContributionForm/>}/>
             <Route path="/catadopt" element={<CatProduct/>}/>
             <Route path="/dogadopt" element={<DogProduct/>}/>
-            <Route path="/Login" element={<Login/>}/>
-            <Route path="/Register" element={<Register/>}/>
             <Route path="/SinglePage/:id" element={<SinglePage/>}/>
+            <Route path="/signup" element={ <Register/> }/>
+            <Route path="/login" element={ <Login/> }/>
+            <Route path="/adminLogin" element={ <AdminLogin/> }/>
+            <Route path="/adminHome" element={<AdminPrivateRoute> <AdminHomePage/> </AdminPrivateRoute>}/>
+            <Route path="/adoptionPage" element={<AdoptionPage/>}/>
          </Routes>
       </div>
    );

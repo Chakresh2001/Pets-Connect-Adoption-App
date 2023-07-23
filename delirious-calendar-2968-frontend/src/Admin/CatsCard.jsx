@@ -1,5 +1,6 @@
 import { Button } from '@chakra-ui/react'
 import React from 'react'
+import { FaTrash } from "react-icons/fa"
 
 export const CatsCard = ({_id,cat_name,breed,age,location,adoption_fee,DeleteCatsData}) => {
   return (
@@ -10,7 +11,7 @@ export const CatsCard = ({_id,cat_name,breed,age,location,adoption_fee,DeleteCat
           <p> <span style={{fontWeight:"bold"}}>Age :- </span> {age}</p>
           <p> <span style={{fontWeight:"bold"}}>Location :- </span> {location}</p>
           <p> <span style={{fontWeight:"bold"}}>Price :- </span> {adoption_fee}</p>
-          <Button mt="15px" colorScheme="red" onClick={()=>DeleteCatsData(_id)}>Delete</Button>
+          <Button mt="15px" colorScheme="red" onClick={()=>DeleteCatsData(_id)}> <FaTrash/> </Button>
         </div>
     </div>
   )

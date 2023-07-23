@@ -1,13 +1,56 @@
-import React from 'react'
+import React, { useContext } from 'react'
 // import bgImg from '../assets/img1.jpg'
 import { useForm } from 'react-hook-form';
 import login_picture from "../Assets/login_picture.jpg"
+import { Link, useNavigate } from 'react-router-dom';
+import { authContext } from '../context/AuthContext';
+import axios from 'axios';
+import { useToast } from '@chakra-ui/react';
 export default function Login() {
 
+    let {AuthLoginFunc,AuthNameFunc} = useContext(authContext)
     const { register, handleSubmit, watch, formState: { errors } } = useForm()
-    const onSubmit = data => console.log(data);
+    const toast = useToast()
+    const navigate = useNavigate()
 
-    // console.log(watch('username'));
+    const onSubmit = (data)=>{
+        axios.post("https://shy-erin-perch-kit.cyclic.app/user/login", data)
+        .then((res)=>{
+            AuthLoginFunc()
+            toast({
+                title: res.data.message,
+                status: 'success',
+                duration: 2000,
+                isClosable: true,
+            })
+            AuthNameFunc(res.data.userName)
+            localStorage.setItem("token", JSON.stringify(res.data.token))
+            setTimeout(() => {
+                navigate("/")
+            }, 1500);
+        })
+        .catch((err)=>{
+            if(err.response.status==402){
+              return  toast({
+                    title: err.response.data.error,
+                    status: 'error',
+                    duration: 2000,
+                    isClosable: true,
+                })
+            }
+
+            if(err.response.status==403){
+                return  toast({
+                    title: err.response.data.error,
+                    status: 'error',
+                    duration: 2000,
+                    isClosable: true,
+                })
+            }
+
+        })
+    }
+
     
   return (
    <div className='Regis'>
@@ -23,6 +66,7 @@ export default function Login() {
          *Email* is mandatory </span>}
      <input type="password" {...register("password")} placeholder='Password' />
      <button className='btn'>Sign In</button>
+    <Link to="/adminLogin"><h1>Admin ?</h1></Link>
  </form>
             </div>
             <div className="col-2">

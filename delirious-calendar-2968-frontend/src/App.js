@@ -12,6 +12,7 @@ import FeedingDog from "./Pages/FeedingDog";
 import AdoptingCats from "./Pages/AdoptionCat";
 import Birdss from "./Pages/Birds";
 import Home from "./Pages/Home";
+import Login from "./Components/Login";
 
 function App() {
    return (
@@ -21,7 +22,6 @@ function App() {
 
           <AllRoutes/>
          <Footer />
-
       </div>
    );
 }
