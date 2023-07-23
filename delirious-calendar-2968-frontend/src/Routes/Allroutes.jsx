@@ -31,8 +31,8 @@ export const AllRoutes = () => {
             <Route path="/ContributionForm" element={<AuthPrivateRoute><ContributionForm/></AuthPrivateRoute>}/>
             <Route path="/catadopt" element={<CatProduct/>}/>
             <Route path="/dogadopt" element={<DogProduct/>}/>
-            <Route path="/SinglePage/:id" element={<SinglePage/>}/>
-            <Route path="/SingleCatPage/:id" element={<SingleCatPage/>}/>
+            <Route path="/SinglePage/:id" element={<AuthPrivateRoute><SinglePage/></AuthPrivateRoute>}/>
+            <Route path="/SingleCatPage/:id" element={<AuthPrivateRoute><SingleCatPage/></AuthPrivateRoute>}/>
             <Route path="/signup" element={ <Register/> }/>
             <Route path="/login" element={ <Login/> }/>
             <Route path="/adminLogin" element={ <AdminLogin/> }/>

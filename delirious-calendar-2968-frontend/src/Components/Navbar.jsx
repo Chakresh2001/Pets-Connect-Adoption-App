@@ -42,6 +42,7 @@ const Navbar = () => {
       isClosable: true,
   })
   AuthLogoutFunc()
+  localStorage.clear()
   }
 
   return (
