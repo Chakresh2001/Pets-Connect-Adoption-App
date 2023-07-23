@@ -16,7 +16,8 @@ const ContributionForm = () => {
   };
 
   return (
-    <div className="contribution-form-container">
+    <div >
+      <div className="contribution-form-container">
       <br />
       <h2 className='header'>Contribute to Petfinder</h2>
       <form onSubmit={handleFormSubmit}>
@@ -100,6 +101,7 @@ const ContributionForm = () => {
 
         <button className="Button" type="submit">Submit</button>
       </form>
+    </div>
     </div>
   );
 };

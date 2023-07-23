@@ -1,14 +1,12 @@
-
 import { HiFilter } from "@react-icons/all-files/hi/HiFilter";
 import { Checkbox, Stack, Text } from '@chakra-ui/react';
 import { Radio, RadioGroup } from '@chakra-ui/react';
-import "../../style/catsidebar.css"
 import { useEffect, useState } from "react";
 import {useSearchParams} from "react-router-dom"
+import "../../style/catsidebar.css"
 
 
-
- const CatSidebar = () => {
+ export const DogSidebar = () => {
 
   const [searchparams,setSearchparams]=useSearchParams();
 
@@ -161,4 +159,3 @@ useEffect(()=>{
     </div>
   );
 };
-export default CatSidebar

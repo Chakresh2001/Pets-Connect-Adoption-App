@@ -1,0 +1,81 @@
+.singlePageContainer{
+    width: 100%;
+    margin-top: 60px;
+    /* border: 1px solid purple; */
+    display: flex;
+    margin: auto;
+    padding: 5%;
+   
+}
+
+.singlePageContainer img{
+   
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    margin-top: 60px;
+}
+
+
+.singlePageData{
+   margin-left: 5%;
+   height: 300px ;
+   width: 700px;
+   /* border: 1px solid #6504b5; */
+   margin-top: 60px;
+    
+}
+.singlePageData h1{
+    margin-top: 10px;
+    height: 10px ;
+    font-size: large;
+    /* color: purple; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+.singlePageData h2{
+    margin-top: 30px;
+    height: 10px ;
+    font-size: large;
+    /* color: rgb(36, 63, 182); */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.singlePageData h3{
+    margin-top: 30px;
+    height: 10px ;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* color: rgb(0, 128, 21) */
+}
+
+.singlePageData h4{
+    margin-top: 40px;
+    height: 20px ;
+    font-size: x-large;
+    color: rgb(9, 206, 19);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+.singlePageData header{
+    font-size: medium;
+    color: rgb(213, 216, 8);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.singlePageData button{
+    border: 1px solid #6504b5;
+    color: #6504b5;
+    margin-top: 60px;
+    width: 60%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.singlePageDetails{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+    font-size: 15px;
+    color: black;
+    
+}
+.singlePageDetails h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+    color: red;
+    
+}

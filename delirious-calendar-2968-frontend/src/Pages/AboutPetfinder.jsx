@@ -11,7 +11,7 @@ export const AboutPetfinder = () => {
 
   return (
    <div style={{background:"#EDE7F6", paddingTop:"50px"}} className="about-container">
-    <div style={{marginRight:"20px",display:"flex", margin:"auto", marginLeft:"10%"}}>
+    <div style={{marginRight:"20px",display:"flex", margin:"auto", marginLeft:"10%", marginTop:"80px"}}>
     <a style={{marginRight:"20px"}} href="http://localhost:3000/">Home <ChevronRightIcon/></a>
            
            <a style={{marginRight:"20px"}} href="">Adopt or Get Involved <ChevronRightIcon/></a>
