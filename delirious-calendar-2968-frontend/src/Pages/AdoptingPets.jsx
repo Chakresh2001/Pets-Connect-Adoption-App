@@ -10,7 +10,7 @@ export const AdoptingPets = () => {
 
   return (
    <div style={{background:"#EDE7F6", paddingTop:"50px"}} className="about-container">
-    <div style={{marginRight:"20px",display:"flex", margin:"auto", marginLeft:"10%"}}>
+    <div style={{marginRight:"20px",display:"flex", margin:"auto", marginLeft:"10%",marginTop:"80px"}}>
     
     <a style={{marginRight:"20px"}} href="">Home  <ChevronRightIcon/></a>
           

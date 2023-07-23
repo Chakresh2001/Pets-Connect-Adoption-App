@@ -8,8 +8,9 @@ import {
     Button,
     useColorModeValue,
   } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
   
-  export  function ProductAddToCart({image_url,id,cat_name,age ,breed ,gender, adoption_fee, location}) {
+  export  function ProductAddToCart({image_url,_id,id,cat_name,age ,breed ,gender, adoption_fee, location}) {
     return (
       <Center py={6}>
         <Box
@@ -51,11 +52,11 @@ import {
                 </Text>
               </Stack>
             </Stack>
-  
+            <Link to={`/SingleCatPage/${_id}`}>
             <Button
               w={'full'}
               mt={8}
-              bg={useColorModeValue('#151f21', 'gray.900')}
+              bg={useColorModeValue('#6504b5', 'gray.900')}
               color={'white'}
               rounded={'md'}
               _hover={{
@@ -64,6 +65,7 @@ import {
               }}>
               Know More
             </Button>
+            </Link>
           </Box>
         </Box>
       </Center>
