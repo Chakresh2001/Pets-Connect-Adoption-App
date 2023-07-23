@@ -93,7 +93,7 @@ export const UserProfile = () => {
   };
 
   return (
-    <Box mt="50px" mb="50px" display={"flex"} justifyContent={"center"}>
+    <Box mb="50px" display={"flex"} justifyContent={"center"}>
       <Box
         width={"50%"}
         boxShadow={
@@ -101,6 +101,7 @@ export const UserProfile = () => {
         }
         borderRadius={"15px"}
         padding="20px"
+        mt="120px"
       >
         <FormControl >
           <FormLabel mt="15px">User Name</FormLabel>

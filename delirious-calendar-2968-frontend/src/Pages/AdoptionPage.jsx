@@ -1,4 +1,4 @@
-import { Box, Button, Text } from '@chakra-ui/react'
+import { Box, Button, Image, Text } from '@chakra-ui/react'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { FaTrash } from 'react-icons/fa6'
@@ -42,7 +42,7 @@ export const AdoptionPage = () => {
                             <Box padding={"20px"} boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px;"}>
                                 <div>
                                 <h1 style={{fontSize:"20px", fontWeight:"bold", marginBottom:"10px"}}>Pets Information</h1>
-                                <img src={ele.pet_image} />
+                                <Image src={ele.pet_image} aspectRatio={"4/3"} objectFit={"cover"} />
                                 <h2>{ele.pet_name}</h2>
                                 <p> <span style={{fontWeight:"bold"}}>Breed :-</span> {ele.pet_breed}</p>
                                 <p> <span style={{fontWeight:"bold"}}>Age:-</span> {ele.pet_age} years</p>
