@@ -2,6 +2,7 @@ import React from 'react'
 // import bgImg from '../assets/img1.jpg'
 import { useForm } from 'react-hook-form';
 import login_picture from "../Assets/login_picture.jpg"
+import { Link } from 'react-router-dom';
 export default function Login() {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm()
@@ -30,6 +31,7 @@ export default function Login() {
             </div>
         </div>
     </section>
+    <Link to="/adminLogin"><h1>Admin ?</h1></Link>
    </div>
   )
 }

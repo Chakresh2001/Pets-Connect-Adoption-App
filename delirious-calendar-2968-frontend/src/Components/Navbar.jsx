@@ -11,6 +11,7 @@ import {
   Text,
 } from '@chakra-ui/react'
 
+
 import './Navbar.css'
 import { AboutPetfinder } from '../Pages/AboutPetfinder';
 import { AdoptingPets } from '../Pages/AdoptingPets';
@@ -36,8 +37,8 @@ const Navbar = () => {
       <div style={{ width: "60%", display: "flex", justifyContent: "space-evenly", marginLeft: "30%", alignItems: "center" }}>
         <h3><a href=""><AiFillHeart style={{ fontSize: '28px' }} /></a></h3>
         <span style={{ borderLeft: '1px solid gray', height: '50px', margin: '0 8px' }}></span>
-        <h3><a href="">Signup</a> </h3>
-        <h3><a href="">Login</a></h3>
+        <Link to="/signup"><h3>Signup</h3></Link>
+        <Link to="/login"><h3>Login</h3></Link>
       </div>
 
       {isNavOpen && (
