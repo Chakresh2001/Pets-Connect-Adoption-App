@@ -5,7 +5,7 @@ import  "../../style/CatAdopt.css";
        return <div className="singlecatcard">
         <img src={image_url} alt="0" />
         <h1>{id}</h1>
-
+        
     </div>
 
    }

@@ -7,7 +7,7 @@ import four from "../Images/4.png";
 const Home = () => {
    return (
       <Box width={"100%"}>
-         <Box border={"1px solid black"}>
+         <Box border={"3px solid #6504b5"}>
             <img
                width={"100%"}
                src="https://www.petfinder.com/sites/default/files/styles/hero_image_925_410/public/images/content/925%20hero%20image_0.jpg?itok=wmYYZbrt"

@@ -6,6 +6,11 @@ import { AdoptingPets } from "../Pages/AdoptingPets";
 import ContributionForm from "../Pages/ContributionForm";
 import { CatProduct } from "../Components/Products/Cat_adopt";
 import { DogProduct } from "../Components/Products/Dog_adopt";
+import Login from "../Components/Login";
+import Register from "../Components/Register";
+import { AdminHomePage } from "../Admin/AdminHomePage";
+import { AdminLogin } from "../Admin/AdminLogin";
+import { SinglePage } from "../Components/Products/SinglePage";
 
 
 export const AllRoutes = () => {
@@ -18,6 +23,9 @@ export const AllRoutes = () => {
             <Route path="/ContributionForm" element={<ContributionForm/>}/>
             <Route path="/catadopt" element={<CatProduct/>}/>
             <Route path="/dogadopt" element={<DogProduct/>}/>
+            <Route path="/Login" element={<Login/>}/>
+            <Route path="/Register" element={<Register/>}/>
+            <Route path="/SinglePage/:id" element={<SinglePage/>}/>
          </Routes>
       </div>
    );

@@ -8,6 +8,7 @@
 .catsidebar{
     /* border:2px solid red; */
     width:25%;
+    margin-top: 50px;
     /* margin: auto; */
 
 
@@ -18,6 +19,7 @@
     gap: 10px;
     /* border:2px solid blue; */
     width:75%;
+    margin-top: 60px;
 }
 .singlecatcard{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

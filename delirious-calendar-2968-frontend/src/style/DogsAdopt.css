@@ -1,0 +1,53 @@
+
+.dogadopt{
+    width:100%;
+    display: flex;
+    margin: auto;
+    
+}
+.dogsidebar{
+    /* border:2px solid red; */
+    width:25%;
+    margin-top: 50px;
+    /* margin: auto; */
+
+
+}
+.singledogcard h3{
+    color: #6504b5;
+}
+.singledogcard button{
+   border: 1px solid #6504b5;
+   color: #6504b5;
+   
+}
+.dogsproduct{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+    /* border:2px solid blue; */
+    width:75%;
+    margin-top: 60px;
+}
+
+.singledogcard{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 2px solid #6504b5;
+    padding: 10px;
+}
+.singledogcard:hover{
+    border: 3px solid #af67eb;
+}
+.singledogcard > img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+}
+
+.spinner{
+    width:10%;
+    position: absolute;
+    top: 25%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}

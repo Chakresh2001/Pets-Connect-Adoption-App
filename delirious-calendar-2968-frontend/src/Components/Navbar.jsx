@@ -36,8 +36,8 @@ const Navbar = () => {
       <div style={{ width: "60%", display: "flex", justifyContent: "space-evenly", marginLeft: "30%", alignItems: "center" }}>
         <h3><a href=""><AiFillHeart style={{ fontSize: '28px' }} /></a></h3>
         <span style={{ borderLeft: '1px solid gray', height: '50px', margin: '0 8px' }}></span>
-        <h3><a href="">Signup</a> </h3>
-        <h3><a href="">Login</a></h3>
+        <h3><a href="/Register">Signup</a> </h3>
+        <h3><a href="/Login">Login</a></h3>
       </div>
 
       {isNavOpen && (
