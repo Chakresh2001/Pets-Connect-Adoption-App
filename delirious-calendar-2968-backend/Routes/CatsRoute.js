@@ -4,52 +4,51 @@ const CatsModel = require('../Model/CatsModel');
 const catsRoute = express.Router()
 
 catsRoute.get("/get", async (req, res) => {
-    try {
-        const { q, cat_name, age, breed, sortBy, sortOrder, page, limit } = req.query;
-    
-        const filter = {};
-  
-        // Apply search filters if provided
-        if (q) {
-          filter.$or = [
-            { cat_name: { $regex: q, $options: "i" } },
-            { breed: { $regex: q, $options: "i" } },
-          ];
-        }
+  try {
+    const { q, gender, age, color, sortBy, sortOrder, page, limit } = req.query;
 
-        if (cat_name) {
-            filter.cat_name = { $regex: cat_name, $options: "i" };
-          }
-          if (age) {
-            filter.age = age;
-          }
-          if (breed) {
-            filter.breed = { $regex: breed, $options: "i" };
-          }
+    const filter = {};
 
-          let sort = {};
-          if (sortBy && sortOrder) {
-            sort = { [sortBy]: sortOrder === "asc" ? 1 : -1 };
-          }
+    // Apply search filters if provided
+    if (q) {
+      filter.$or = [
+        { gender: { $regex: q, $options: "i" } },
+        { color: { $regex: q, $options: "i" } },
+      ];
+    }
 
-          const pageNumber = parseInt(page) || 1;
-          const pageSize = parseInt(limit) || 10;
-          const skip = (pageNumber - 1) * pageSize;    
+    if (gender) {
+      filter.gender = { $regex: gender, $options: "i" };
+    }
+    if (age) {
+      filter.age = age;
+    }
+    if (color) {
+      filter.color = { $in: color }; // Use $in to match multiple color values
+    }
 
-        const catsData = await CatsModel.find(filter)
-        .sort(sort)
-        .skip(skip)
-        .limit(pageSize);
+    let sort = {};
+    if (sortBy && sortOrder) {
+      sort = { [sortBy]: sortOrder === "asc" ? 1 : -1 };
+    }
 
-        const totalCatsCount = await CatsModel.countDocuments(filter);
-  
-        res.json({ cats: catsData, totalCount: totalCatsCount });
-        
-        
-      } catch (error) {
-        res.status(500).json({ error: 'Internal Server Error' });
-      }
+    const pageNumber = parseInt(page) || 1;
+    const pageSize = parseInt(limit) || 10;
+    const skip = (pageNumber - 1) * pageSize;
+
+    const catsData = await CatsModel.find(filter)
+      .sort(sort)
+      .skip(skip)
+      .limit(pageSize);
+
+    const totalCatsCount = await CatsModel.countDocuments(filter);
+
+    res.json({ cats: catsData, totalCount: totalCatsCount });
+  } catch (error) {
+    res.status(500).json({ error: "Internal Server Error" });
+  }
 });
+
 
 
 catsRoute.get("/get/:id", async(req,res)=>{

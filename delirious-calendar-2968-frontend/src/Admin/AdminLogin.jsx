@@ -36,7 +36,7 @@ export const AdminLogin = () => {
 
     axios.post("https://shy-erin-perch-kit.cyclic.app/admin/login", obj)
     .then((res)=>{
-      if(res.status==200){
+      if(res.status===200){
         adminLoginFunc()
         toast({
           title: 'Successfully Logged In',
