@@ -13,6 +13,8 @@ import { AdminHomePage } from "../Admin/AdminHomePage"
 import { AdminPrivateRoute } from "../context/AdminPrivateRoute"
 import { AdoptionPage } from "../Pages/AdoptionPage";
 import { SingleCatPage } from "../Components/Products/SingleCatPage";
+import FeedingCat from "../Pages/FeedingCats";
+import FeedingDog from "../Pages/FeedingDog";
 
 
 
@@ -33,6 +35,10 @@ export const AllRoutes = () => {
             <Route path="/adminLogin" element={ <AdminLogin/> }/>
             <Route path="/adminHome" element={<AdminPrivateRoute> <AdminHomePage/> </AdminPrivateRoute>}/>
             <Route path="/adoptionPage" element={<AdoptionPage/>}/>
+            <Route path="/FeedingCat" element={<FeedingCat/>}/>
+            <Route path="/FeedingDog" element={<FeedingDog/>}/>
+           
+           
             
          </Routes>
       </div>

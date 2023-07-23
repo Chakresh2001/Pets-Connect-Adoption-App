@@ -4,6 +4,7 @@ import one from "../Images/1.png";
 import two from "../Images/2.png";
 import three from "../Images/3.png";
 import four from "../Images/4.png";
+import { Link } from "react-router-dom";
 const Home = () => {
    return (
       <Box width={"100%"}>
@@ -61,10 +62,14 @@ const Home = () => {
                   gap={"50px"}
                >
                   <Box boxSize={150}  p={1} >
+                     <Link to={"/dogadopt"}>
                      <img src={one} alt="1" style={{boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}/>
+                     </Link>
                   </Box>
                   <Box boxSize={150}  p={1} >
+                  <Link to={"/catadopt"}>
                      <img src={two} alt="2"style={{boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }} />
+                     </Link>
                   </Box>
                   <Box boxSize={160}   p={1} >
                      <img src={three} alt="3" style={{boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}/>

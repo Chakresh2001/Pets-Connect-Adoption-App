@@ -308,6 +308,7 @@ const FeedingDog = () => {
                      width: "60%",
                      textAlign: "left",
                      marginLeft: "7%",
+                     
                   }}
                >
                   <div style={{ marginRight: "10px" }}>
