@@ -36,7 +36,10 @@ export const AdminHomePage = () => {
     const [page,setPage]=useState(1)
     
     
-
+      useEffect(()=>{
+        getUserData()
+        setUserState(true)
+      },[])
 
 
     let getUserData = ()=>{
