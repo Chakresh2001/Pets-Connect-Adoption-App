@@ -6,7 +6,6 @@
     border-radius: 8px;
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 80px;
     padding: 50px;
     margin-bottom: 20px;
   }
@@ -16,6 +15,7 @@
     margin-bottom: 20px;
     font-size: 25px;
     color: #6504b5;
+    margin-top: 50px;
   }
   
   .form-group {
@@ -28,8 +28,9 @@
     font-weight: bold;
   }
   
-  input[type='text'],
+
   input[type='number'],
+  input[type='text'],
   input[type='email'],
   select,
   textarea {

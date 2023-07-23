@@ -10,11 +10,12 @@
     width:25%;
     margin-top: 50px;
     /* margin: auto; */
-
+    
 
 }
 .singledogcard h3{
     color: #6504b5;
+
 }
 .singledogcard button{
    border: 1px solid #6504b5;
@@ -27,7 +28,7 @@
     gap: 15px;
     /* border:2px solid blue; */
     width:75%;
-    margin-top: 60px;
+    margin-top: 102px;
 }
 
 .singledogcard{

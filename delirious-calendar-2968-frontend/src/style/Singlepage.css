@@ -5,23 +5,22 @@
     display: flex;
     margin: auto;
     padding: 5%;
+   
 }
 
 .singlePageContainer img{
    
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    margin-top: 60px;
 }
 
-.singlePageimg:hover{
-    border: 1px solid #6504b5;
-}
 
 .singlePageData{
    margin-left: 5%;
    height: 300px ;
    width: 700px;
    /* border: 1px solid #6504b5; */
-
+   margin-top: 60px;
     
 }
 .singlePageData h1{
