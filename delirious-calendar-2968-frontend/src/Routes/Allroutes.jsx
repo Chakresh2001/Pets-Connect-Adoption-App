@@ -11,6 +11,7 @@ import Login from "../Components/Login"
 import { AdminLogin } from "../Admin/AdminLogin"
 import { AdminHomePage } from "../Admin/AdminHomePage"
 import { AdminPrivateRoute } from "../context/AdminPrivateRoute"
+import { AdoptionPage } from "../Pages/AdoptionPage";
 
 
 export const AllRoutes = () => {
@@ -27,6 +28,7 @@ export const AllRoutes = () => {
             <Route path="/login" element={ <Login/> }/>
             <Route path="/adminLogin" element={ <AdminLogin/> }/>
             <Route path="/adminHome" element={<AdminPrivateRoute> <AdminHomePage/> </AdminPrivateRoute>}/>
+            <Route path="/adoptionPage" element={<AdoptionPage/>}/>
          </Routes>
       </div>
    );
