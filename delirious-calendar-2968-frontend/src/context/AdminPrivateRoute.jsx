@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { adminContext } from './AdminAuthContext'
+import { Navigate } from 'react-router-dom'
 
 export const AdminPrivateRoute = ({children}) => {
 
@@ -7,11 +8,9 @@ export const AdminPrivateRoute = ({children}) => {
 
 
     if(!adminLogin){
-        return <Navigate to="/"/>
+        return <Navigate to="/adminLogin"/>
     }
 
 
-  return (
-    {children}
-  )
+  return children
 }

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Flex,Box,  Input, Button, useToast, Text } from "@chakra-ui/react"
 import axios from "axios"
 import { adminContext } from '../context/AdminAuthContext'
@@ -14,15 +14,18 @@ import {
   MDBCheckbox
 }
 from 'mdb-react-ui-kit';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export const AdminLogin = () => {
 
 
- let {adminLoginFunc} = useContext(adminContext)
+ let {adminLogin,adminLoginFunc} = useContext(adminContext)
 
   const [email,setemail] = useState("")
   const [password,setpassword] = useState("")
   const toast = useToast()
+  const navigate=useNavigate()
+  
 
   let handleSubmit = (e)=>{
     e.preventDefault()
@@ -42,6 +45,7 @@ export const AdminLogin = () => {
           duration: 2000,
           isClosable: true,
         })
+        navigate("/adminHome")
       }
     })
     .catch((err)=>{
@@ -55,10 +59,10 @@ export const AdminLogin = () => {
 
     })
 
-    console.log(obj)
-
+    
   }
-
+  
+  
   return (
     <MDBContainer fluid>
       <MDBRow>
