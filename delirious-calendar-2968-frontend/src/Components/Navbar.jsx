@@ -11,6 +11,7 @@ import {
   Text,
   Button,
   Box,
+  useToast,
 } from '@chakra-ui/react'
 
 
@@ -23,37 +24,56 @@ import { ChevronDownIcon } from '@chakra-ui/icons';
 import { FaRightFromBracket } from 'react-icons/fa6';
 import logo from "../image/logo.png"
 
+import { FaHeartCirclePlus, FaRightFromBracket } from 'react-icons/fa6';
+import { FaUserAlt } from 'react-icons/fa';
+
+
+
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-
-  const {AuthLogin, AuthName} = useContext(authContext)
+  const toast = useToast()
+  const {AuthLogin, AuthName, AuthLogoutFunc} = useContext(authContext)
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   }
-  console.log(AuthLogin)
+
+  let handleLogout = ()=>{
+    toast({
+      title: "Logged Out",
+      status: 'error',
+      duration: 2000,
+      isClosable: true,
+  })
+  AuthLogoutFunc()
+  }
+
   return (
     <div style={{ width: "90%", display: "flex", justifyContent: "space-evenly", height: "60px", position:"fixed", zIndex:"5", width:"100%", background:"white"  }}>
       <div style={{ width: "40%", display: "flex", margin: "auto", marginLeft: "40px", color: "#3A1456" }}>
-        <a href="http://localhost:3000/"><img width="60px" src={logo} alt="" /></a>
+        <Link to="/">
+        <img width="60px" src={logo} alt="" />
+        </Link>
+
         <h3 style={{marginRight:"10px", marginLeft:"10px"}}>ALL ABOUT PETS</h3>
         <h3  href="#" onClick={toggleNav} style={{ cursor: "pointer", width:"30px", fontSize:"20px", fontWeight:"bolder" }}> {isNavOpen ? <CgChevronUp /> : <CgChevronDown />}</h3>
       </div>
 
       <div style={{ width: "60%", display: "flex", justifyContent: "space-evenly", marginLeft: "30%", alignItems: "center" }}>
 
-            <h3><a href=""><AiFillHeart style={{ fontSize: '28px' }} /></a></h3>  
+            <h3><AiFillHeart style={{ fontSize: '28px' }} /></h3>  
+
         {
           AuthLogin ? (
             <Box w="60%">
             <Menu>
               <MenuButton>{AuthName}</MenuButton>
               <MenuList>
-                <MenuItem>Profile</MenuItem>
-                <Link to="/adoptionPage"><MenuItem>Adoption</MenuItem></Link>
+                <Link to="/userProfile"><MenuItem> <FaUserAlt/> Profile</MenuItem></Link>
+                <Link to="/adoptionPage"><MenuItem> <FaHeartCirclePlus/>Adopted Requests</MenuItem></Link>
+                <MenuItem onClick={handleLogout}><FaRightFromBracket/>Log Out</MenuItem>
               </MenuList>
             </Menu>
-              <Button ml="170px" w="4%"  colorScheme='red' > <FaRightFromBracket/> </Button>
             </Box>
           ) : (
             <div style={{ width: "60%", display: "flex", justifyContent: "space-evenly", marginLeft: "30%", alignItems: "center" }}>
