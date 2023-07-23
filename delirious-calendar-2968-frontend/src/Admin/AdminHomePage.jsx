@@ -1,14 +1,20 @@
-import { Box, Button, Flex, useToast } from '@chakra-ui/react'
+import { Box, Button, Flex, Text, useToast } from '@chakra-ui/react'
 import axios from 'axios'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { UserCard } from './UserCard'
 import { PostCard } from './PostCard'
 import { DogsCard } from "./DogsCard"
 import { CatsCard } from "./CatsCard"
+import { FaDog,FaUserAlt, FaCat,   } from "react-icons/fa"
+import { FaRightFromBracket } from "react-icons/fa6"
+import { Contribute } from './Contribute'
+import { adminContext } from '../context/AdminAuthContext'
 
 export const AdminHomePage = () => {
     
     const toast = useToast()
+
+    const {adminLogoutFunc} = useContext(adminContext)
 
     const [users, setUsers] = useState([])
     const [userState, setUserState] = useState(false)
@@ -30,12 +36,7 @@ export const AdminHomePage = () => {
     const [page,setPage]=useState(1)
     
     
-    const [fullName, setFullName] = useState('');
-    const [email, setEmail] = useState('');
-    const [petType, setPetType] = useState('');
-    const [petBreed, setPetBreed] = useState('');
-    const [age, setAge] = useState('');
-    const [message, setMessage] = useState('');
+
 
 
     let getUserData = ()=>{
@@ -212,24 +213,34 @@ export const AdminHomePage = () => {
       })
     }
 
-    console.log(page)
+    let handleLogout = ()=>{
+      adminLogoutFunc()
+    }
 
   return (
-    <div>
+    <div style={{backgroundColor:"#ffffff"}}>
 
-    <Flex justifyContent={"space-evenly"} alignItems={"center"} border={"1px solid red"} height="100px">
+      <Flex  alignItems={"center"} height="100px" bg="#dccbd5">
+        <Flex justifyContent={"space-around"} w="80%" >
 
-    <Button onClick={handleClickUsers}>Users</Button>
-    <Button onClick={handleClickPosts}>Requests</Button>
-    <Button onClick={handleDogsData}>Dog's Data</Button>
-    <Button onClick={handleCatsData}>Cat's Data</Button>
-    <Button onClick={handleFormState}>Add Data</Button>
+        <Button _hover={{borderRadius:"25px", bg:"#e3e8e6"}} borderRadius={"none"} outline={"none"} bg="#dccbd5" onClick={handleClickUsers}>Users</Button>
+        <Button _hover={{borderRadius:"25px", bg:"#e3e8e6"}} borderRadius={"none"} outline={"none"} bg="#dccbd5" onClick={handleClickPosts}>Requests</Button>
+        <Button _hover={{borderRadius:"25px", bg:"#e3e8e6"}} borderRadius={"none"} outline={"none"} bg="#dccbd5" onClick={handleDogsData}>Dog's Data</Button>
+        <Button _hover={{borderRadius:"25px", bg:"#e3e8e6"}} borderRadius={"none"} outline={"none"} bg="#dccbd5" onClick={handleCatsData}>Cat's Data</Button>
+        <Button _hover={{borderRadius:"25px", bg:"#e3e8e6"}} borderRadius={"none"} outline={"none"} bg="#dccbd5" onClick={handleFormState}>Add Data</Button>
 
-    </Flex>
+        </Flex>
+
+        <Button ml="170px" w="4%" borderRadius={"25px"} colorScheme='red' onClick={handleLogout}> <FaRightFromBracket/> </Button>
+
+      </Flex>
 
     
         {userState && <div style={{marginTop:"40px"}}>
-        <h1 style={{fontSize:"24px", fontWeight:"bold"}}>Users Data</h1>
+        <Box display={"flex"} justifyContent={"center"} alignItems={"center"} gap="18px">
+          <FaUserAlt style={{height:"50px",width:"50px"}}/>
+          <h1 style={{fontSize:"24px", fontWeight:"bold", marginTop:"15px"}}> Users Data</h1>
+        </Box>
         <Box display={"grid"} gridTemplateColumns={"1fr 1fr 1fr"} gap="20px" mt="45px" >
             {
                 users.map((ele)=>(
@@ -264,7 +275,10 @@ export const AdminHomePage = () => {
 
     {
         DogsState && <div style={{marginTop:"40px"}}>
-                    <h1 style={{fontSize:"24px", fontWeight:"bold"}}>Dogs Data</h1>
+                    <Box display={"flex"} justifyContent={"center"} alignItems={"center"} gap="18px">
+                    <FaDog style={{height:"50px",width:"50px"}}/>
+                    <h1 style={{fontSize:"24px", fontWeight:"bold", marginTop:"15px"}}> Dogs Data</h1>
+                    </Box>
                     <Box  display={"grid"} gridTemplateColumns={"1fr 1fr "} gap="20px" mt="45px"  >
 
             {
@@ -275,20 +289,15 @@ export const AdminHomePage = () => {
                 ))
             }
                     </Box>
-            <Box display="flex" gap="15px" justifyContent="center" mt="10px">
-              <Button onClick={handlePreviousClick} isDisabled={currentPage==1}>
-                Previous
-              </Button>
-              <Button onClick={handleNextClick} isDisabled={currentPage==5}>
-                Next
-              </Button>
-            </Box>
         </div>
     }
 
     {
         CatsState && <div style={{marginTop:"40px"}}>
-                    <h1 style={{fontSize:"24px", fontWeight:"bold"}}>Cats Data</h1>
+        <Box display={"flex"} justifyContent={"center"} alignItems={"center"} gap="18px">
+                    <FaCat style={{height:"50px",width:"50px"}}/>
+                    <h1 style={{fontSize:"24px", fontWeight:"bold", marginTop:"15px"}}> Cats Data</h1>
+                    </Box>
                     <Box  display={"grid"} gridTemplateColumns={"1fr 1fr "} gap="20px" mt="45px"  >
 
             {
@@ -299,95 +308,12 @@ export const AdminHomePage = () => {
                 ))
             }
                     </Box>
-            <Box display="flex" gap="15px" justifyContent="center" mt="10px">
-              <Button onClick={handleCatsPrevious} isDisabled={page==1}>
-                Previous
-              </Button>
-              <Button onClick={handleCatsNext} isDisabled={page==3}>
-                Next
-              </Button>
-            </Box>
+            
         </div>
     }
 
     {
-        formState && <div>
-            <h1>Add Pets</h1>
-            <div className="contribution-form-container">
-      <br />
-      <h2 className='header'>Contribute to Petfinder</h2>
-      <form >
-        <div className="form-group">
-          <label htmlFor="fullName">Full Name:</label>
-          <input
-            type="text"
-            id="fullName"
-            value={fullName}
-            onChange={(e) => setFullName(e.target.value)}
-            required
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-
-
-
-        <div className="form-group">
-          <label htmlFor="petType">Pet Type:</label>
-          <input
-            type="text"
-            id="petType"
-            value={petType}
-            onChange={(e) => setPetType(e.target.value)}
-            required
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="petBreed">Pet Breed:</label>
-          <input
-            type="text"
-            id="petBreed"
-            value={petBreed}
-            onChange={(e) => setPetBreed(e.target.value)}
-            required
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="age">Age:</label>
-          <input
-            type="number"
-            id="age"
-            value={age}
-            onChange={(e) => setAge(e.target.value)}
-            required
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="message">Message:</label>
-          <textarea
-            id="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-          />
-        </div>
-
-        <button className="Button" type="submit">Submit</button>
-      </form>
-    </div>
-        </div>
+        formState && <Contribute/>
     }
 
     </div>

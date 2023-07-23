@@ -1,8 +1,24 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Flex,Box,  Input, Button, useToast, Text } from "@chakra-ui/react"
 import axios from "axios"
+import { adminContext } from '../context/AdminAuthContext'
+import {
+  MDBBtn,
+  MDBContainer,
+  MDBCard,
+  MDBCardBody,
+  MDBInput,
+  MDBIcon,
+  MDBRow,
+  MDBCol,
+  MDBCheckbox
+}
+from 'mdb-react-ui-kit';
 
 export const AdminLogin = () => {
+
+
+ let {adminLoginFunc} = useContext(adminContext)
 
   const [email,setemail] = useState("")
   const [password,setpassword] = useState("")
@@ -15,9 +31,10 @@ export const AdminLogin = () => {
       password:password
     }
 
-    axios.post("http://localhost:8080/admin/login", obj)
+    axios.post("https://shy-erin-perch-kit.cyclic.app/admin/login", obj)
     .then((res)=>{
       if(res.status==200){
+        adminLoginFunc()
         toast({
           title: 'Successfully Logged In',
           description: 'Welcome Admin',
@@ -25,7 +42,6 @@ export const AdminLogin = () => {
           duration: 2000,
           isClosable: true,
         })
-        localStorage.setItem("adminLogin", JSON.stringify(true))
       }
     })
     .catch((err)=>{
@@ -44,25 +60,35 @@ export const AdminLogin = () => {
   }
 
   return (
-    <Flex bg="#FAF0F2" justifyContent={"center"} alignItems={"center"}  height={"790px"}>
-        <Box bg="#F2E8EB" borderRadius={"10px"} w="40%" padding="20px" boxShadow={"rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;"}>
+    <MDBContainer fluid>
+      <MDBRow>
 
-        <form  onSubmit={handleSubmit}>
+        <MDBCol sm='6'>
 
-        <Text fontSize={"28px"} fontWeight={"bold"}>Admin Login Page</Text>
+          <div className='d-flex flex-row ps-5 pt-5'>
+            <MDBIcon fas icon="crow fa-3x me-3" style={{ color: '#709085' }}/>
+            <span className="h1 fw-bold mb-0">Logo</span>
+          </div>
 
-        <Input border={"1px solid grey"} mt="15px" type="mail" placeholder='email' value={email} onChange={(e)=>setemail(e.target.value)}/>
+          <div className='d-flex flex-column justify-content-center h-custom-2 w-75 pt-4'>
 
-        <Input border={"1px solid grey"} mt="15px" type="password" placeholder='password' value={password} onChange={(e)=>setpassword(e.target.value)}/>
+            <h3 className="fw-normal mb-3  pb-5" style={{letterSpacing: '1px',marginLeft:"90px"}}>Admin Log in</h3>
 
-        <Box mt="20px">
-        <Input color="#010304" border={"1px solid grey"} type="submit" w="25%" m="auto" bg="#DADEF1"></Input>
-        </Box>
+            <MDBInput value={email} onChange={(e)=>setemail(e.target.value)} wrapperClass='mb-4 mx-5 w-100' label='Email address' id='formControlLg' type='email' size="lg"/>
+            <MDBInput value={password} onChange={(e)=>setpassword(e.target.value)} wrapperClass='mb-4 mx-5 w-100' label='Password' id='formControlLg' type='password' size="lg"/>
 
-        </form>
+            <button style={{width:"100%",backgroundColor:"#31D2F2", marginLeft:"50px", padding:"10px", borderRadius:"7px", fontSize:"20px"}} onClick={handleSubmit}>Login</button>
+          </div>
 
+        </MDBCol>
 
-        </Box>
-    </Flex>
+        <MDBCol sm='6' className='d-none d-sm-block px-0'>
+          <img src="https://images.unsplash.com/photo-1563460716037-460a3ad24ba9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+            alt="Login image" className="w-100" style={{objectFit: 'cover', objectPosition: 'left', height:"795px"}} />
+        </MDBCol>
+
+      </MDBRow>
+
+    </MDBContainer>
   )
 }

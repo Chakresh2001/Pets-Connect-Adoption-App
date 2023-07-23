@@ -1,3 +1,7 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import $ from 'jquery';
+import Popper from 'popper.js';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -7,6 +11,7 @@ import { BrowserRouter } from "react-router-dom";
 import { ChakraProvider } from '@chakra-ui/react'
 import { Provider } from 'react-redux';
 import { Store } from './Redux/store';
+import { AdminAuthContext } from './context/AdminAuthContext';
 // import { store } from './Redux/store';
 document.title="Pet-Connect"
 
@@ -14,9 +19,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ChakraProvider>
     <BrowserRouter>
+    <AdminAuthContext>
       <Provider store={Store}>
         <App />
       </Provider>
+    </AdminAuthContext>
     </BrowserRouter>
 </ChakraProvider>
 );
