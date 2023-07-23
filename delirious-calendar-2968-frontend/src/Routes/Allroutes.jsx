@@ -12,7 +12,12 @@ import { AdminLogin } from "../Admin/AdminLogin"
 import { AdminHomePage } from "../Admin/AdminHomePage"
 import { AdminPrivateRoute } from "../context/AdminPrivateRoute"
 import { AdoptionPage } from "../Pages/AdoptionPage";
+
 import { SingleCatPage } from "../Components/Products/SingleCatPage";
+
+import { AuthPrivateRoute } from "../context/AuthPrivateRoute";
+import { UserProfile } from "../Pages/UserProfile";
+
 
 
 
@@ -23,7 +28,7 @@ export const AllRoutes = () => {
             <Route path="/" element={<Home />} />
             <Route path="/AboutPetfinder" element={<AboutPetfinder/>}/>
             <Route path="/AdoptingPets" element={<AdoptingPets/>}/>
-            <Route path="/ContributionForm" element={<ContributionForm/>}/>
+            <Route path="/ContributionForm" element={<AuthPrivateRoute><ContributionForm/></AuthPrivateRoute>}/>
             <Route path="/catadopt" element={<CatProduct/>}/>
             <Route path="/dogadopt" element={<DogProduct/>}/>
             <Route path="/SinglePage/:id" element={<SinglePage/>}/>
@@ -32,8 +37,9 @@ export const AllRoutes = () => {
             <Route path="/login" element={ <Login/> }/>
             <Route path="/adminLogin" element={ <AdminLogin/> }/>
             <Route path="/adminHome" element={<AdminPrivateRoute> <AdminHomePage/> </AdminPrivateRoute>}/>
-            <Route path="/adoptionPage" element={<AdoptionPage/>}/>
-            
+            <Route path="/adoptionPage" element={<AuthPrivateRoute><AdoptionPage/></AuthPrivateRoute>}/>
+            <Route path="/userProfile" element={<AuthPrivateRoute><UserProfile/></AuthPrivateRoute>}/>
+
          </Routes>
       </div>
    );
