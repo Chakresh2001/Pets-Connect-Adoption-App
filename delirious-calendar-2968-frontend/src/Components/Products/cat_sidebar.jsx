@@ -81,11 +81,10 @@ useEffect(()=>{
   return (
     <div className="sidebar">
       <div>
-        <div className="postion">
-          <p><HiFilter /></p>
-        </div>
-        <br />
-        <h1 style={{ fontSize: "22px" }}>Filter By</h1>
+      <div className="postion">
+        <p><HiFilter /></p>
+      </div>
+      <h1 style={{ fontSize: "22px" }}>Filter By</h1>
         <br />
         <div>
           <Text fontSize='lg' className="testing">Gender</Text>

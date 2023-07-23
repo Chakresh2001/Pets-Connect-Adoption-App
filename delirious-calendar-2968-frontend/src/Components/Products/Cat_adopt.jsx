@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { getcatproduct } from "../../Redux/Cat_product_reducer/action";
 import { useLocation,useSearchParams } from "react-router-dom";
 
+
 import { Spinner } from '@chakra-ui/react'
 import {ProductAddToCart} from "./Cat_Single_Cart";
 

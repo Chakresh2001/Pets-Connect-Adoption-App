@@ -41,6 +41,7 @@ const Navbar = () => {
       </div>
 
       <div style={{ width: "60%", display: "flex", justifyContent: "space-evenly", marginLeft: "30%", alignItems: "center" }}>
+
             <h3><a href=""><AiFillHeart style={{ fontSize: '28px' }} /></a></h3>  
         {
           AuthLogin ? (
@@ -62,6 +63,7 @@ const Navbar = () => {
             </div>
           )
         }
+
       </div>
 
       {isNavOpen && (
