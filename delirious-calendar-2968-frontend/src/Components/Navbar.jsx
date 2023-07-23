@@ -53,7 +53,7 @@ const Navbar = () => {
       </div>
 
       <div style={{ width: "60%", display: "flex", justifyContent: "space-evenly", marginLeft: "30%", alignItems: "center" }}>
-            <h3><a href=""><AiFillHeart style={{ fontSize: '28px' }} /></a></h3>  
+            <h3><AiFillHeart style={{ fontSize: '28px' }} /></h3>  
         {
           AuthLogin ? (
             <Box w="60%">
