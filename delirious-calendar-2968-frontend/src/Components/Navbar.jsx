@@ -21,8 +21,12 @@ import { AdoptingPets } from '../Pages/AdoptingPets';
 import { Link, NavLink } from 'react-router-dom';
 import { authContext } from '../context/AuthContext';
 import { ChevronDownIcon } from '@chakra-ui/icons';
+import { FaRightFromBracket } from 'react-icons/fa6';
+import logo from "../image/logo.png"
+
 import { FaHeartCirclePlus, FaRightFromBracket } from 'react-icons/fa6';
 import { FaUserAlt } from 'react-icons/fa';
+
 
 
 const Navbar = () => {
@@ -47,7 +51,10 @@ const Navbar = () => {
   return (
     <div style={{ width: "90%", display: "flex", justifyContent: "space-evenly", height: "60px", position:"fixed", zIndex:"5", width:"100%", background:"white"  }}>
       <div style={{ width: "40%", display: "flex", margin: "auto", marginLeft: "40px", color: "#3A1456" }}>
-        <Link to="/"><img width="100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYJpd1Z1-nXD8n-9gbkbXcOd7AHwC6AXbz5WgL_aug-yjrRbMD9TMi0-sw4OMvt1uI4KQ&usqp=CAU" alt="" /></Link>
+        <Link to="/">
+        <img width="60px" src={logo} alt="" />
+        </Link>
+
         <h3 style={{marginRight:"10px", marginLeft:"10px"}}>ALL ABOUT PETS</h3>
         <h3  href="#" onClick={toggleNav} style={{ cursor: "pointer", width:"30px", fontSize:"20px", fontWeight:"bolder" }}> {isNavOpen ? <CgChevronUp /> : <CgChevronDown />}</h3>
       </div>
@@ -80,7 +87,7 @@ const Navbar = () => {
       </div>
 
       {isNavOpen && (
-        <div style={{ position: "absolute", top: '50px', left: 0, width: '100%', backgroundColor: '#6504b5', color: '#fff', transition: 'height 0.5s', boder:"1px solid red" }}>
+        <div style={{ position: "absolute", top: '52px', left: 0, width: '100%', backgroundColor: '#6504b5', color: '#fff', transition: 'height 0.5s', boder:"1px solid red" }}>
           
           <ul style={{ listStyleType: 'none', padding: 0, display: "flex", justifyContent: "space-evenly", height: "60px", alignItems: "center" }}>
             <li><Menu >
@@ -107,7 +114,9 @@ const Navbar = () => {
     <MenuItem bgColor="#6504b5">Dog Adoption</MenuItem>
     </Link>
     <MenuItem bgColor="#6504b5">Dog Breeds</MenuItem>
+    <Link to="/FeedingDog">
     <MenuItem bgColor="#6504b5">Feeding your Dog</MenuItem>
+    </Link>
     <MenuItem bgColor="#6504b5">Dog Behavior</MenuItem>
     <MenuItem bgColor="#6504b5">Dog Health & Wellness</MenuItem>
     <MenuItem bgColor="#6504b5">Dog Training</MenuItem>
@@ -123,7 +132,9 @@ const Navbar = () => {
       <MenuItem bgColor="#6504b5">Cat Adoption</MenuItem>
     </Link>
     <MenuItem bgColor="#6504b5">Cat Breeds</MenuItem>
+     <Link to="/FeedingCat">
     <MenuItem bgColor="#6504b5">Feeding your Cat</MenuItem>
+    </Link>
     <MenuItem bgColor="#6504b5">Cat Behavior</MenuItem>
     <MenuItem bgColor="#6504b5">Cat Health & Wellness</MenuItem>
     <MenuItem bgColor="#6504b5">Cat Training</MenuItem>

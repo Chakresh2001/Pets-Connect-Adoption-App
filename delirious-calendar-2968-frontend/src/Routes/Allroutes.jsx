@@ -14,6 +14,8 @@ import { AdminPrivateRoute } from "../context/AdminPrivateRoute"
 import { AdoptionPage } from "../Pages/AdoptionPage";
 
 import { SingleCatPage } from "../Components/Products/SingleCatPage";
+import FeedingCat from "../Pages/FeedingCats";
+import FeedingDog from "../Pages/FeedingDog";
 
 import { AuthPrivateRoute } from "../context/AuthPrivateRoute";
 import { UserProfile } from "../Pages/UserProfile";
@@ -37,8 +39,17 @@ export const AllRoutes = () => {
             <Route path="/login" element={ <Login/> }/>
             <Route path="/adminLogin" element={ <AdminLogin/> }/>
             <Route path="/adminHome" element={<AdminPrivateRoute> <AdminHomePage/> </AdminPrivateRoute>}/>
+
+            <Route path="/adoptionPage" element={<AdoptionPage/>}/>
+            <Route path="/FeedingCat" element={<FeedingCat/>}/>
+            <Route path="/FeedingDog" element={<FeedingDog/>}/>
+           
+           
+            
+
             <Route path="/adoptionPage" element={<AuthPrivateRoute><AdoptionPage/></AuthPrivateRoute>}/>
             <Route path="/userProfile" element={<AuthPrivateRoute><UserProfile/></AuthPrivateRoute>}/>
+
 
          </Routes>
       </div>
