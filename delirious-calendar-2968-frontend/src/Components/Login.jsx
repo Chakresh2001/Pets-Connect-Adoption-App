@@ -24,6 +24,7 @@ export default function Login() {
          *Email* is mandatory </span>}
      <input type="password" {...register("password")} placeholder='Password' />
      <button className='btn'>Sign In</button>
+    <Link to="/adminLogin"><h1>Admin ?</h1></Link>
  </form>
             </div>
             <div className="col-2">
@@ -31,7 +32,6 @@ export default function Login() {
             </div>
         </div>
     </section>
-    <Link to="/adminLogin"><h1>Admin ?</h1></Link>
    </div>
   )
 }
