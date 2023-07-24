@@ -17,7 +17,7 @@ const FeedingCat = () => {
 
    const handleToggle = () => setShow(!show);
    return (
-      <div style={{ background: "#EDE7F6", paddingTop: "50px" }}>
+      <div style={{ background: "#EDE7F6", paddingTop: "150px" }}>
          <div
             style={{
                marginRight: "20px",
@@ -68,11 +68,11 @@ const FeedingCat = () => {
                   padding: "10px",
                }}
             >
-               {/* <img
+               <img
                   width="100%"
                   src="https://www.petfinder.com/static/82f9e51cea4d5f75a9a1499323374aa2/18234/black-cat.webp"
                   alt=""
-               /> */}
+               />
                <h1
                   style={{
                      fontFamily: "Cairo, sans-serif",
@@ -271,7 +271,7 @@ const FeedingCat = () => {
                }}
             >
                <img
-                  src="https://www.petfinder.com/static/cat_bestMatch_rightRail-0e10aa465452304e3450c52f24c2bc3d.png"
+                  src="https://www.petfinder.com/static/855d5e197a22e87adfb2e52a16fdbadd/3fa69/iStock-475858561-cropped-1_0.webp"
                   alt=""
                />
                <h1 style={{ color: "#6504b5", fontSize: "40px" }}>
@@ -313,7 +313,7 @@ const FeedingCat = () => {
                   <div style={{ marginRight: "10px" }}>
                      <ProductSimple
                         image={
-                           "https://www.petfinder.com/static/6d2ada7a93f1b64eda1d0c0d459cd683/6ae8d/cat-treats-calorie-count.webp"
+                           "https://www.petfinder.com/static/e12ac8cb5a5f70b9bbb560f71b1031ac/f2559/iStock-974827064-1536x1024.webp"
                         }
                         dis={"cat FOOD & TREATS"}
                         data={"Calories in cat Treats"}
@@ -322,7 +322,7 @@ const FeedingCat = () => {
                   <div style={{ marginRight: "10px" }}>
                      <ProductSimple
                         image={
-                           "https://www.petfinder.com/static/ef3a52b81719d55834e77b0ab8a499c5/6ae8d/dry-cat-food-calorie-count.webp"
+                           "https://www.petfinder.com/static/742de696b1a42c4cbfd8cea943fd9524/93c27/iStock-1128072738-cropped-1.webp"
                         }
                         dis={"cat FOOD & TREATS"}
                         data={"Calories in Dry cat Food"}
@@ -331,7 +331,7 @@ const FeedingCat = () => {
                   <div style={{ marginRight: "10px" }}>
                      <ProductSimple
                         image={
-                           "https://www.petfinder.com/static/a87b099a6e6ea3592daa10ab0aebbc97/a8059/wet-cat-food-calorie-count.webp"
+                           "https://www.petfinder.com/static/8e18b4dbefd2020f766ec3d127a56f4a/6ae8d/is-milk-bad-for-cats.webp"
                         }
                         dis={"cat FOOD & TREATS"}
                         data={"Calories in Wet cat Food"}
@@ -355,7 +355,7 @@ const FeedingCat = () => {
                      }}
                   >
                      <img
-                        src="https://tpc.googlesyndication.com/simgad/7664748080391793672"
+                        src="https://www.petfinder.com/static/9a0fb361c7706227e3e6f6dbb0413162/93c27/CE3_Main_KeepYourCatAtAHealthyWeight.webp"
                         alt=""
                      />
                      <p>Sponsored ad</p>
@@ -413,7 +413,7 @@ const FeedingCat = () => {
                      }}
                   >
                      <img
-                        src="https://tpc.googlesyndication.com/simgad/1171372932639143872"
+                        src="https://www.petfinder.com/static/6434366567c5ee14b773cef1959d3e67/f2559/iStock-180324389-1536x1024.webp"
                         alt=""
                      />
                   </div>
@@ -444,7 +444,7 @@ const FeedingCat = () => {
                   <div style={{ marginRight: "10px" }}>
                      <ProductSimple
                         image={
-                           "https://www.petfinder.com/static/a7fa80829728c2cd68dbc73c993a0691/3fa69/Apple-cider-vinegar-for-cats_01_0.webp"
+                           "https://www.petfinder.com/static/620de5b991f568515365e8a910035930/8745a/138190243-cat-massage-251x189_0.webp"
                         }
                         dis={"cat NUTRITION"}
                         data={"Calories in cat Treats"}
@@ -453,7 +453,7 @@ const FeedingCat = () => {
                   <div style={{ marginRight: "10px" }}>
                      <ProductSimple
                         image={
-                           "https://www.petfinder.com/static/f076657385441f8af51b97488299f15b/93c27/How-much-to-feed-a-puppy-01.webp"
+                           "https://www.petfinder.com/static/76157fec08eb9dd2654c7badc1b6c2bd/93c27/Persian_Black.webp"
                         }
                         dis={"cat NUTRITION"}
                         data={"Calories in Dry cat Food"}
@@ -462,7 +462,7 @@ const FeedingCat = () => {
                   <div style={{ marginRight: "10px" }}>
                      <ProductSimple
                         image={
-                           "https://www.petfinder.com/static/a87b099a6e6ea3592daa10ab0aebbc97/a8059/wet-cat-food-calorie-count.webp"
+                           "https://www.petfinder.com/static/1309ebea444b37e7393930fbc4a7907f/6ae8d/149620597-cat-allergy-symptoms-632x475.webp"
                         }
                         dis={"cat NUTRITION"}
                         data={"Calories in Wet cat Food"}
@@ -497,7 +497,7 @@ const FeedingCat = () => {
                   <div style={{ marginRight: "10px" }}>
                      <ProductSimple
                         image={
-                           "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/61971517/1/?bust=1683800945&width=316"
+                           "https://www.petfinder.com/static/2755512d0a1633ccb2020d8b85df4be2/f2559/PF2015_258_Cats_Shelter.webp"
                         }
                         dis={"Tux"}
                      />

@@ -59,7 +59,7 @@ export const AdoptionPage = () => {
                     }
                 </Box>
             ) : (
-                <Box>
+                <Box mt="120px">
                     <Text>No Adoption Requests Yet</Text>
                 </Box>
             )

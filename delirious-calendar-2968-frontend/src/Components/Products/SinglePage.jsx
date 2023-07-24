@@ -73,6 +73,7 @@ export const SinglePage = () => {
           console.log('User data posted successfully:', response.data);
           toast({
             title: 'Thank You For Adoption',
+            description: "You will recieve an email regarding the same",
             status: 'success',
             duration: 2000,
             isClosable: true,

@@ -24,7 +24,7 @@ import { ChevronDownIcon } from '@chakra-ui/icons';
 import { FaRightFromBracket } from 'react-icons/fa6';
 import logo from "../image/logo.png"
 
-import { FaHeartCirclePlus, FaRightFromBracket } from 'react-icons/fa6';
+import { FaHeartCirclePlus } from 'react-icons/fa6';
 import { FaUserAlt } from 'react-icons/fa';
 
 
@@ -56,8 +56,8 @@ const Navbar = () => {
         <img width="60px" src={logo} alt="" />
         </Link>
 
-        <h3 style={{marginRight:"10px", marginLeft:"10px"}}>ALL ABOUT PETS</h3>
-        <h3  href="#" onClick={toggleNav} style={{ cursor: "pointer", width:"30px", fontSize:"20px", fontWeight:"bolder" }}> {isNavOpen ? <CgChevronUp /> : <CgChevronDown />}</h3>
+        <h3 style={{marginRight:"10px", marginLeft:"10px", marginTop:"15px"}}>ALL ABOUT PETS</h3>
+        <h3  href="#" onClick={toggleNav} style={{marginTop:"15px", cursor: "pointer", width:"30px", fontSize:"20px", fontWeight:"bolder" }}> {isNavOpen ? <CgChevronUp /> : <CgChevronDown />}</h3>
       </div>
 
       <div style={{ width: "60%", display: "flex", justifyContent: "space-evenly", marginLeft: "30%", alignItems: "center" }}>

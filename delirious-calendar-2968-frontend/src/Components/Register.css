@@ -6,13 +6,6 @@
     margin: 0;
 }
 
-body{
-  background: #0f0c29;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
-}
-
 .Regis{
   height: 100vh;
   display: flex;
@@ -20,6 +13,7 @@ body{
   align-items: center;
   text-align: center;
   background-image: linear-gradient(79deg, #664c92, #c1b9c0 48%, #f4a973);
+  
 }
 
 .register{
@@ -28,8 +22,9 @@ body{
   display:flex;
   border: 1px solid #e9ecef;
   border-radius: 5px;
-  /* box-shadow: 1px 3px 10px #e9ecef; */
+  box-shadow: 1px 3px 10px #e9ecef;
   background-color: white;
+  
 }
 
 .register span{
@@ -69,7 +64,7 @@ body{
 
 .register .col-1{
   margin: auto;
-  padding: 3em 0;
+  padding:50px;
 }
 
 .register .col-2 img{

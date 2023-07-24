@@ -17,7 +17,7 @@ const FeedingDog = () => {
 
    const handleToggle = () => setShow(!show);
    return (
-      <div style={{ background: "#EDE7F6", paddingTop: "50px" }}>
+      <div style={{ background: "#EDE7F6", paddingTop: "150px" }}>
          <div
             style={{
                marginRight: "20px",

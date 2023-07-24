@@ -223,8 +223,8 @@ export const AdminHomePage = () => {
   return (
     <div style={{backgroundColor:"#ffffff"}}>
 
-      <Flex  alignItems={"center"} height="100px" bg="#dccbd5">
-        <Flex justifyContent={"space-around"} w="80%" >
+      <Flex  alignItems={"center"} height="100px" bg="#dccbd5"  paddingTop={"170px"}>
+        <Flex justifyContent={"space-around"} w="80%" mb="20px" >
 
         <Button _hover={{borderRadius:"25px", bg:"#e3e8e6"}} borderRadius={"none"} outline={"none"} bg="#dccbd5" onClick={handleClickUsers}>Users</Button>
         <Button _hover={{borderRadius:"25px", bg:"#e3e8e6"}} borderRadius={"none"} outline={"none"} bg="#dccbd5" onClick={handleClickPosts}>Requests</Button>
@@ -239,7 +239,7 @@ export const AdminHomePage = () => {
       </Flex>
 
     
-        {userState && <div style={{marginTop:"40px"}}>
+        {userState && <div style={{marginTop:"80px"}}>
         <Box display={"flex"} justifyContent={"center"} alignItems={"center"} gap="18px">
           <FaUserAlt style={{height:"50px",width:"50px"}}/>
           <h1 style={{fontSize:"24px", fontWeight:"bold", marginTop:"15px"}}> Users Data</h1>

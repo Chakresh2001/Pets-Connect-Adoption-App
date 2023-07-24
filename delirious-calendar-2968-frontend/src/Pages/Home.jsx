@@ -94,7 +94,7 @@ const Home = () => {
             </Stack>
          </Box> */}
          <Box>
-            <Heading color={"#6504b5"} p={"5% 20%"}>
+            <Heading color={"#6504b5"} p={"5% 20%"} mt="50px">
                Pets Available for Adoption Nearby
             </Heading>
             <Stack
@@ -257,7 +257,7 @@ const Home = () => {
             </Stack>
          </Box>
          <Box>
-            <Heading color={"#6504b5"}>
+            <Heading color={"#6504b5"} mb="30px">
                Pets Available for Adoption Nearby
             </Heading>
             <Stack
