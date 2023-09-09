@@ -31,7 +31,7 @@ export const SinglePage = () => {
     const [overlay, setOverlay] = React.useState(<OverlayTwo />)
 
     const singleData=()=>{
-        axios.get(`https://shy-erin-perch-kit.cyclic.app/dogs/get/${id}`)
+        axios.get(`https://cute-erin-tick-hat.cyclic.cloud/dogs/get/${id}`)
         .then((res)=>{
             setPage(res.data.dog)
             //console.log(res.data); 
@@ -61,7 +61,7 @@ export const SinglePage = () => {
       const token = JSON.parse(localStorage.getItem('token'));
   
       // The endpoint URL for the POST request
-      const postEndpoint = 'https://shy-erin-perch-kit.cyclic.app/post/add';
+      const postEndpoint = 'https://cute-erin-tick-hat.cyclic.cloud/post/add';
   
       axios
         .post(postEndpoint, object, {

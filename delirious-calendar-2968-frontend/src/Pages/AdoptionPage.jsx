@@ -9,7 +9,7 @@ export const AdoptionPage = () => {
 
     let getposts = ()=>{
         let token = JSON.parse(localStorage.getItem("token"))
-        fetch("https://shy-erin-perch-kit.cyclic.app/post", {
+        fetch("https://cute-erin-tick-hat.cyclic.cloud/post", {
             method:"GET",
             headers : {
                 "Authorization" : `bearer ${token}`
@@ -28,7 +28,7 @@ export const AdoptionPage = () => {
     },[])
 
     let DeletePost = (id)=>{
-        axios.delete(`https://shy-erin-perch-kit.cyclic.app/post/delete/${id}`).then((res)=>getposts())
+        axios.delete(`https://cute-erin-tick-hat.cyclic.cloud/post/delete/${id}`).then((res)=>getposts())
     }
 
 

@@ -5,7 +5,7 @@ export const getcatproduct=(query)=>(dispatch)=>{
    dispatch({type:GET_REQUEST,});
    // console.log(query)
    
-   axios.get("https://shy-erin-perch-kit.cyclic.app/cats/get",query)
+   axios.get("https://cute-erin-tick-hat.cyclic.cloud/cats/get",query)
    // axios.get("http://localhost:8080/cats/get",query)
    .then((res)=>{
    //  console.log(res.data)

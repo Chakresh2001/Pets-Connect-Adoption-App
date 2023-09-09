@@ -22,7 +22,7 @@ export const UserProfile = () => {
 
   let getUserData = ()=>{
     let token = JSON.parse(localStorage.getItem("token"));
-    fetch("https://shy-erin-perch-kit.cyclic.app/admin/users/get", {
+    fetch("https://cute-erin-tick-hat.cyclic.cloud/admin/users/get", {
       method: "GET",
       headers: {
         Authorization: `bearer ${token}`,
@@ -55,7 +55,7 @@ export const UserProfile = () => {
 
     // The endpoint URL for updating user data
     const updateUserEndpoint =
-      "https://shy-erin-perch-kit.cyclic.app/user/patch";
+      "https://cute-erin-tick-hat.cyclic.cloud/user/patch";
 
     // Assuming the API expects a PATCH request with the updated data in the "data" variable.
     // You may need to adjust the API endpoint and data structure based on your specific backend requirements.

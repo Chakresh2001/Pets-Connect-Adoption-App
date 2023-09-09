@@ -43,7 +43,7 @@ export const AdminHomePage = () => {
 
 
     let getUserData = ()=>{
-        axios.get("https://shy-erin-perch-kit.cyclic.app/admin/users")
+        axios.get("https://cute-erin-tick-hat.cyclic.cloud/admin/users")
         .then((res)=>{
             setUsers(res.data.users)
         })
@@ -52,7 +52,7 @@ export const AdminHomePage = () => {
     }
 
     let getPostData = ()=>{
-      axios.get("https://shy-erin-perch-kit.cyclic.app/admin/forms")
+      axios.get("https://cute-erin-tick-hat.cyclic.cloud/admin/forms")
         .then((res)=>{
             setPosts(res.data.posts)
           })
@@ -81,7 +81,7 @@ export const AdminHomePage = () => {
     
   let handleBlockUSer = (id)=>{
 
-   axios.post(`https://shy-erin-perch-kit.cyclic.app/admin/block/${id}`)
+   axios.post(`https://cute-erin-tick-hat.cyclic.cloud/admin/block/${id}`)
    .then((res)=>{
        getUserData()
        toast({
@@ -96,7 +96,7 @@ export const AdminHomePage = () => {
   }
           
     let getDogsData = ()=>{
-     axios.get(`https://shy-erin-perch-kit.cyclic.app/dogs/get?page=${currentPage}&limit=10`)
+     axios.get(`https://cute-erin-tick-hat.cyclic.cloud/dogs/get?page=${currentPage}&limit=10`)
      .then((res)=>{
        setDogs(res.data.dogs)
      })
@@ -126,7 +126,7 @@ export const AdminHomePage = () => {
 
 
     let getCatsData = ()=>{
-      axios.get(`https://shy-erin-perch-kit.cyclic.app/cats/get?page=${page}&limit=10`)
+      axios.get(`https://cute-erin-tick-hat.cyclic.cloud/cats/get?page=${page}&limit=10`)
         .then((res)=>{
             setCats(res.data.cats)
         })
@@ -145,7 +145,7 @@ export const AdminHomePage = () => {
     };
 
     const DeleteDogsData = (id)=>{
-      axios.delete(`https://shy-erin-perch-kit.cyclic.app/dogs/delete/${id}`)
+      axios.delete(`https://cute-erin-tick-hat.cyclic.cloud/dogs/delete/${id}`)
       .then((res)=>{
         toast({
           title: 'Data Deleted',
@@ -157,7 +157,7 @@ export const AdminHomePage = () => {
       })
     }
     const DeleteCatsData = (id)=>{
-      axios.delete(`https://shy-erin-perch-kit.cyclic.app/Cats/delete/${id}`)
+      axios.delete(`https://cute-erin-tick-hat.cyclic.cloud/Cats/delete/${id}`)
       .then((res)=>{
         toast({
           title: 'Data Deleted',
@@ -191,7 +191,7 @@ export const AdminHomePage = () => {
     }
 
     let handleReject=(id)=>{
-      axios.delete(`https://shy-erin-perch-kit.cyclic.app/post/delete/${id}`)
+      axios.delete(`https://cute-erin-tick-hat.cyclic.cloud/post/delete/${id}`)
       .then((res)=>{
         toast({
           title: 'Request Rejected',
@@ -204,7 +204,7 @@ export const AdminHomePage = () => {
     }
 
     let handleApprove = (id)=>{
-      axios.patch(`https://shy-erin-perch-kit.cyclic.app/post/patch/${id}`)
+      axios.patch(`https://cute-erin-tick-hat.cyclic.cloud/post/patch/${id}`)
       .then((res)=>{
         toast({
           title: 'Request Approved',
@@ -221,9 +221,9 @@ export const AdminHomePage = () => {
     }
 
   return (
-    <div style={{backgroundColor:"#ffffff"}}>
+    <div  style={{backgroundColor:"#ffffff", paddingTop:"70px"}}>
 
-      <Flex  alignItems={"center"} height="100px" bg="#dccbd5">
+      <Flex   alignItems={"center"} height="100px" bg="#dccbd5">
         <Flex justifyContent={"space-around"} w="80%" >
 
         <Button _hover={{borderRadius:"25px", bg:"#e3e8e6"}} borderRadius={"none"} outline={"none"} bg="#dccbd5" onClick={handleClickUsers}>Users</Button>

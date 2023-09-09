@@ -18,13 +18,13 @@ import {
 import './Navbar.css'
 import { AboutPetfinder } from '../Pages/AboutPetfinder';
 import { AdoptingPets } from '../Pages/AdoptingPets';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { authContext } from '../context/AuthContext';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import { FaRightFromBracket } from 'react-icons/fa6';
 import logo from "../image/logo.png"
 
-import { FaHeartCirclePlus, FaRightFromBracket } from 'react-icons/fa6';
+import { FaHeartCirclePlus} from 'react-icons/fa6';
 import { FaUserAlt } from 'react-icons/fa';
 
 
@@ -33,6 +33,7 @@ const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const toast = useToast()
   const {AuthLogin, AuthName, AuthLogoutFunc} = useContext(authContext)
+  let navigate = useNavigate()
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -45,6 +46,7 @@ const Navbar = () => {
       duration: 2000,
       isClosable: true,
   })
+  navigate("/")
   AuthLogoutFunc()
   localStorage.clear()
   }

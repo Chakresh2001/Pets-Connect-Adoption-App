@@ -23,7 +23,7 @@ export const AdminLogin = () => {
       password:password
     }
 
-    axios.post("https://shy-erin-perch-kit.cyclic.app/admin/login", obj)
+    axios.post("https://cute-erin-tick-hat.cyclic.cloud/admin/login", obj)
     .then((res)=>{
       if(res.status===200){
         adminLoginFunc()

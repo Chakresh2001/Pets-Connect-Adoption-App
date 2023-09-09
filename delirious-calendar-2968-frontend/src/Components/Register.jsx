@@ -43,7 +43,7 @@ export default function Register() {
             gender : formData.gender,
         }
 
-        axios.post("https://shy-erin-perch-kit.cyclic.app/user/register", obj)
+        axios.post("https://cute-erin-tick-hat.cyclic.cloud/user/register", obj)
         .then((res)=>{
             toast({
                 title: `${res.data.message}`,

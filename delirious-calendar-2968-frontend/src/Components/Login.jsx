@@ -14,7 +14,7 @@ export default function Login() {
     const navigate = useNavigate()
 
     const onSubmit = (data)=>{
-        axios.post("https://shy-erin-perch-kit.cyclic.app/user/login", data)
+        axios.post("https://cute-erin-tick-hat.cyclic.cloud/user/login", data)
         .then((res)=>{
             AuthLoginFunc()
             toast({

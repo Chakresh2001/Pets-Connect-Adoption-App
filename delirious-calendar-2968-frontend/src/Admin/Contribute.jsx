@@ -34,7 +34,7 @@ export const Contribute = () => {
         }
 
        if(petType=="cats"){
-        axios.post("https://shy-erin-perch-kit.cyclic.app/cats/add", catObject)
+        axios.post("https://cute-erin-tick-hat.cyclic.cloud/cats/add", catObject)
         .then((res)=>{
             toast({
                 title: 'Cats Data Added',
@@ -55,7 +55,7 @@ export const Contribute = () => {
         })
        }
        if(petType=="dogs"){
-        // axios.post("https://shy-erin-perch-kit.cyclic.app/dogs/add", dogObject)
+        // axios.post("https://cute-erin-tick-hat.cyclic.cloud/dogs/add", dogObject)
         // .then((res)=>{
             toast({
                 title: 'Dogs Data Added',

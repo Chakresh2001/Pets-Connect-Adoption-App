@@ -55,7 +55,7 @@ const ContributionForm = () => {
     }
 
    if(petType=="cats"){
-    axios.post("https://shy-erin-perch-kit.cyclic.app/cats/add", catObject)
+    axios.post("https://cute-erin-tick-hat.cyclic.cloud/cats/add", catObject)
     .then((res)=>{
         toast({
             title: 'Cats Data Added',

@@ -4,7 +4,7 @@ import axios from "axios"
 export const getdogproduct=(dispatch)=>{
    dispatch({type:GET_REQUEST,});
    
-   axios.get("https://shy-erin-perch-kit.cyclic.app/dogs/get")
+   axios.get("https://cute-erin-tick-hat.cyclic.cloud/dogs/get")
    .then((res)=>{
     console.log(res.data)
     return dispatch({type:GET_SUCCESS,payload:res.data})
