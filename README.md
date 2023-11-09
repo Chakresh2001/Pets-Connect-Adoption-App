@@ -11,15 +11,15 @@ This is a Collaborative Project constructed within 5 days of time span.
 
 # FUNCTIONALITIES :- 
 
-# Pet Searches: Easily search for pets based on various criteria such as species, breed, age, and location to find your ideal match.
+ Pet Searches: Easily search for pets based on various criteria such as species, breed, age, and location to find your ideal match.
 
-# User Accounts: Create a personalized account to save your preferences, track your adoption journey, and receive updates on available pets.
+ User Accounts: Create a personalized account to save your preferences, track your adoption journey, and receive updates on available pets.
 
-# Wish Lists: Curate a list of your favorite pets, making it simple to revisit and consider adoption options.
+ Wish Lists: Curate a list of your favorite pets, making it simple to revisit and consider adoption options.
 
-# Adoption Requests: Submit adoption requests directly through our platform, streamlining the communication between you and the shelter.
+ Adoption Requests: Submit adoption requests directly through our platform, streamlining the communication between you and the shelter.
 
-# Admin Controls: For animal welfare organizations, our website offers administrative controls to manage pet listings, adoption requests, and more.
+ Admin Controls: For animal welfare organizations, our website offers administrative controls to manage pet listings, adoption requests, and more.
 
 
 # Home Page :- 
@@ -42,4 +42,4 @@ This is a Collaborative Project constructed within 5 days of time span.
 ![admin page](https://github.com/Chakresh2001/delirious-calendar-2968/assets/120241122/a1a74aaa-23d6-4c88-baba-a9b55033d5ed)
 
 
-# Deployed Link :- https://previous-chalk-3282.vercel.app/
+# Deployed Link :- https://pets-connect.vercel.app/
